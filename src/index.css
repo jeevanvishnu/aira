@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #FFF8F5; /* Soft Cream */
+}
+
+/* Placeholder space for the fixed navbar */
+.content-wrapper {
+  padding-top: 80px; /* var(--navbar-height) */
+  min-height: 100vh;
+}
