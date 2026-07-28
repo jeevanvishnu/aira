@@ -144,18 +144,28 @@
   }
   
   .kids-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    letter-spacing: 0.1em;
   }
   
   .kids-subtitle {
     font-size: 1.2rem;
   }
+
+  .kids-visuals {
+    min-height: 340px;
+    width: 100%;
+  }
   
   .img-tall {
-    width: 90%;
+    width: 75%;
   }
   
   .img-square {
-    display: none; /* Simplify layout for very small screens */
+    display: block;
+    width: 42%;
+    left: 0;
+    bottom: -15px;
+    border-width: 6px;
   }
 }

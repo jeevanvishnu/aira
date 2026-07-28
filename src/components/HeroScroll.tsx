@@ -10,18 +10,14 @@ const HeroScroll: React.FC = () => {
         <div className="hero-gradient-overlay"></div>
       </div>
 
-      {/* Floating luxury badge — mobile only */}
-      <div className="hero-badge">
-        <span className="hero-badge-text">Hand&shy;crafted{'\n'}Pure Gold</span>
-      </div>
       
       <div className="hero-content">
         {/* Gold accent line — mobile only */}
         <div className="hero-accent-line"></div>
 
         <h1 className="hero-headline">
-          <span style={{ display: 'block', whiteSpace: 'nowrap' }}>Where Timeless Beauty</span>
-          <span style={{ display: 'block', whiteSpace: 'nowrap' }}>Meets Modern Craft</span>
+          <span style={{ display: 'block' }}>Where Timeless Beauty</span>
+          <span style={{ display: 'block' }}>Meets Modern Craft</span>
         </h1>
         <p className="hero-description">
           Discover exquisitely crafted jewelry designed to celebrate your elegance, every day.
