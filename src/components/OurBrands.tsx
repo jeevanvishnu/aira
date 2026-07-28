@@ -41,7 +41,6 @@ const OurBrands: React.FC = () => {
                 <h4 className="brand-subtitle">{brand.subtitle}</h4>
                 <div className="brand-line"></div>
                 <p className="brand-description">{brand.description}</p>
-                <button className="brand-explore">Explore {brand.name}</button>
               </div>
             </div>
           ))}

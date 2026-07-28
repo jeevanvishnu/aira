@@ -17,7 +17,7 @@ const BridalCollection: React.FC = () => {
           <p className="bridal-description">
             Celebrate your most precious moments with masterpieces crafted for eternity. Our exclusive bridal collection meticulously blends traditional heritage with contemporary design, ensuring you shine with unmatched brilliance on your special day.
           </p>
-          <button className="bridal-btn">Explore The Collection</button>
+          <button className="bridal-btn" onClick={() => window.location.href = '#contact'}>Explore The Collection</button>
         </div>
 
         {/* Image Grid - Right Side */}

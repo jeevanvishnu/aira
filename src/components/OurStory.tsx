@@ -50,7 +50,6 @@ export default function OurStory() {
           <div className="story-watermark">AIRA</div>
           
           <div className="story-text-content">
-            <span className="story-eyebrow">Est. 2020 · Aira Jewels</span>
             <h2 className="story-title">OUR STORY</h2>
             <div className="story-title-divider"></div>
 
@@ -68,8 +67,6 @@ export default function OurStory() {
                 Ariana Grande.
               </p>
             </div>
-
-            <button className="story-cta">Discover More</button>
           </div>
         </div>
 

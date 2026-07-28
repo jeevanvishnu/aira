@@ -4,7 +4,7 @@ import heroBg from '../assets/model-hero-bg.png';
 
 const HeroScroll: React.FC = () => {
   return (
-    <section className="hero">
+    <section className="hero" id="home">
       <div className="hero-background-container">
         <img src={heroBg} alt="Luxury Pearl and Gold Jewelry" className="hero-background-image" />
         <div className="hero-gradient-overlay"></div>
@@ -20,7 +20,7 @@ const HeroScroll: React.FC = () => {
         </p>
         
         <div className="hero-cta">
-          <button className="btn-solid-white">
+          <button className="btn-solid-white" onClick={() => window.location.href = '#contact'}>
             Explore Collection
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{marginLeft: '8px'}}>
               <line x1="7" y1="17" x2="17" y2="7"></line>

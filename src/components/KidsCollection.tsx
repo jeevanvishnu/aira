@@ -13,7 +13,7 @@ const KidsCollection: React.FC = () => {
           <p className="kids-description">
             Discover our enchanting collection of fine jewelry designed specially for the little ones. Crafted with exceptional care, safety, and a touch of magic for those precious early moments.
           </p>
-          <button className="kids-btn">Explore Collection</button>
+          <button className="kids-btn" onClick={() => window.location.href = '#contact'}>Explore Collection</button>
         </div>
         
         <div className="kids-visuals">
