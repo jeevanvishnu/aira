@@ -1,6 +1,11 @@
 import React from 'react';
 import './TrendingNow.css';
 
+import auspiciousImg from '../assets/trending-auspicious.png';
+import giftingImg from '../assets/trending-gifting.png';
+import origamiImg from '../assets/trending-origami-v2.png';
+import everydayImg from '../assets/trending-everyday.png';
+
 interface Category {
   id: number;
   name: string;
@@ -11,22 +16,22 @@ const trendingCategories: Category[] = [
   {
     id: 1,
     name: 'Auspicious Occasion',
-    image: 'https://images.unsplash.com/photo-1605100804763-247f67b4549e?auto=format&fit=crop&q=80&w=800',
+    image: auspiciousImg,
   },
   {
     id: 2,
     name: 'Gifting Jewellery',
-    image: 'https://images.unsplash.com/photo-1599643478524-fb66f7220088?auto=format&fit=crop&q=80&w=800',
+    image: giftingImg,
   },
   {
     id: 3,
     name: 'Origami Edit',
-    image: 'https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&q=80&w=800',
+    image: origamiImg,
   },
   {
     id: 4,
     name: 'Everyday Essentials',
-    image: 'https://images.unsplash.com/photo-1588444837495-c6cfeb53f32d?auto=format&fit=crop&q=80&w=800',
+    image: everydayImg,
   },
 ];
 

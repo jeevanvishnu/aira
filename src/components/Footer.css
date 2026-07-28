@@ -1,243 +1,185 @@
-.footer-section {
-  background-color: #fff;
+.footer-classic {
+  background-color: #faf8f5; /* Very soft ivory/blush, classic for luxury */
+  padding: 80px 5% 20px;
   border-top: 1px solid rgba(0,0,0,0.05);
   color: #111;
-  padding: 0 3%;
 }
 
-/* Newsletter Section */
-.footer-newsletter {
-  max-width: 1400px;
+.footer-classic-container {
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 80px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-  flex-wrap: wrap;
-  gap: 40px;
-}
-
-.newsletter-text h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem;
-  font-weight: 400;
-  margin-bottom: 0.5rem;
-  color: #111;
-}
-
-.newsletter-text p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.95rem;
-  color: #666;
-  font-weight: 300;
-}
-
-.newsletter-form {
-  display: flex;
-  width: 100%;
-  max-width: 500px;
-  border-bottom: 1px solid #111;
-}
-
-.newsletter-form input {
-  flex: 1;
-  border: none;
-  background: transparent;
-  padding: 15px 0;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.95rem;
-  color: #111;
-  outline: none;
-}
-
-.newsletter-form input::placeholder {
-  color: #aaa;
-  font-weight: 300;
-}
-
-.newsletter-form button {
-  background: transparent;
-  border: none;
-  color: #111;
-  cursor: pointer;
-  padding: 0 10px;
-  transition: transform 0.3s ease;
-}
-
-.newsletter-form button:hover {
-  transform: translateX(5px);
-}
-
-/* Main Footer Area */
-.footer-main {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 100px 0;
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1.5fr;
   gap: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 
-.brand-col {
-  padding-right: 40px;
+/* Column 1: Brand */
+.footer-col-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .footer-logo {
-  height: 80px; /* Adjust based on actual logo proportion */
-  margin-bottom: 1.5rem;
-  display: block;
+  height: 45px;
+  margin-bottom: 25px;
 }
 
-.footer-brand-desc {
+.footer-description {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   line-height: 1.8;
   color: #666;
   font-weight: 300;
-  margin-bottom: 2rem;
+  max-width: 350px;
+  margin-bottom: 30px;
 }
 
-.footer-socials {
+.footer-social-icons {
   display: flex;
   gap: 20px;
 }
 
-.footer-socials a {
+.footer-social-icons a {
   color: #111;
-  transition: color 0.3s ease, transform 0.3s ease;
-  display: inline-block;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.footer-socials a:hover {
+.footer-social-icons a:hover {
   color: #d4af37;
   transform: translateY(-3px);
 }
 
-.footer-col h4 {
+/* Column 2: Links */
+.footer-col-links h4, .footer-col-contact h4 {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.9rem;
   font-weight: 500;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  margin-bottom: 2rem;
+  margin-bottom: 30px;
   color: #111;
 }
 
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.footer-col-links nav {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 
-.footer-col ul li {
-  margin-bottom: 1.2rem;
-}
-
-.footer-col ul li a {
+.footer-col-links a {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 0.95rem;
+  color: #555;
   text-decoration: none;
   font-weight: 300;
   transition: color 0.3s ease;
-  position: relative;
+  width: fit-content;
 }
 
-.footer-col ul li a:hover {
+.footer-col-links a:hover {
   color: #d4af37;
 }
 
-.boutique-info li {
+/* Column 3: Contact */
+.contact-address {
+  margin-bottom: 25px;
+}
+
+.contact-address p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  font-weight: 300;
+  margin: 0;
+}
+
+.contact-details p {
   font-family: 'Montserrat', sans-serif;
   font-size: 0.9rem;
-  color: #666;
+  color: #444;
   font-weight: 300;
-  margin-bottom: 0.5rem;
+  margin-bottom: 10px;
 }
 
-.location-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #111 !important;
-  font-weight: 500 !important;
-  margin-bottom: 1rem !important;
+.contact-details strong {
+  font-weight: 500;
+  color: #111;
 }
 
-.location-icon {
+.contact-details a {
+  color: #111;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+.contact-details a:hover {
   color: #d4af37;
 }
 
-/* Footer Bottom */
-.footer-bottom {
-  max-width: 1400px;
+/* Bottom Bar */
+.footer-classic-bottom {
+  max-width: 1300px;
   margin: 0 auto;
-  padding: 30px 0;
-  border-top: 1px solid rgba(0,0,0,0.05);
+  padding-top: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.footer-bottom p {
+.footer-classic-bottom p {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #888;
   font-weight: 300;
 }
 
-.footer-legal {
+.footer-bottom-links {
   display: flex;
-  gap: 30px;
+  gap: 25px;
 }
 
-.footer-legal a {
+.footer-bottom-links a {
   font-family: 'Montserrat', sans-serif;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: #888;
   text-decoration: none;
   font-weight: 300;
   transition: color 0.3s ease;
 }
 
-.footer-legal a:hover {
+.footer-bottom-links a:hover {
   color: #111;
 }
 
 /* Mobile Responsiveness */
-@media screen and (max-width: 1200px) {
-  .footer-main {
+@media screen and (max-width: 992px) {
+  .footer-classic-container {
     grid-template-columns: 1fr 1fr;
-    gap: 60px 40px;
+    gap: 50px;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .footer-newsletter {
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    padding: 60px 0;
+@media screen and (max-width: 600px) {
+  .footer-classic {
+    padding: 60px 16px 20px;
   }
   
-  .newsletter-form {
-    max-width: 100%;
-  }
-
-  .footer-main {
+  .footer-classic-container {
     grid-template-columns: 1fr;
-    padding: 60px 0;
     gap: 40px;
   }
   
-  .brand-col {
-    padding-right: 0;
-  }
-  
-  .footer-bottom {
+  .footer-classic-bottom {
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
     text-align: center;
   }
 }

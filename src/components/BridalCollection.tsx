@@ -1,5 +1,8 @@
 import React from 'react';
 import './BridalCollection.css';
+import bridalMain from '../assets/bridal-main.png';
+import bridalNecklace from '../assets/bridal-necklace.png';
+import bridalRings from '../assets/bridal-rings.png';
 
 const BridalCollection: React.FC = () => {
   return (
@@ -22,7 +25,7 @@ const BridalCollection: React.FC = () => {
           {/* Main Tall Image */}
           <div className="bridal-img-wrapper tall-img">
             <img 
-              src="https://images.unsplash.com/photo-1601121853354-e6e866bd22fa?auto=format&fit=crop&q=80&w=800" 
+              src={bridalMain} 
               alt="Bridal Jewelry" 
               className="bridal-img" 
             />
@@ -32,14 +35,14 @@ const BridalCollection: React.FC = () => {
           <div className="bridal-stacked-imgs">
             <div className="bridal-img-wrapper small-img">
               <img 
-                src="https://images.unsplash.com/photo-1595844730298-b960fad9736c?auto=format&fit=crop&q=80&w=600" 
+                src={bridalNecklace} 
                 alt="Bridal Necklace Close-up" 
                 className="bridal-img" 
               />
             </div>
             <div className="bridal-img-wrapper small-img">
               <img 
-                src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80&w=600" 
+                src={bridalRings} 
                 alt="Bridal Rings" 
                 className="bridal-img" 
               />

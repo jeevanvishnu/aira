@@ -16,7 +16,7 @@ export default function OurStory() {
           }
         });
       },
-      { threshold: 0.12 }
+      { threshold: 0.15 }
     );
 
     if (sectionRef.current) {
@@ -31,47 +31,46 @@ export default function OurStory() {
   return (
     <section
       id="about"
-      className={`story-section ${isVisible ? 'is-visible' : ''}`}
+      className={`story-premium-split ${isVisible ? 'is-visible' : ''}`}
       ref={sectionRef}
     >
-      <div className="story-container">
-
-        {/* ── Image — flush to left edge ── */}
-        <div className="story-image-container">
-          <div className="story-image-outer-bezel">
-            <div className="story-image-inner-bezel">
-              <img
-                src={brandAmbassador}
-                alt="Brand Ambassador Ariana Grande"
-                className="story-image"
-              />
-              <div className="story-image-overlay"></div>
-            </div>
-          </div>
+      <div className="story-split-container">
+        
+        {/* Left Side: Full Bleed Image */}
+        <div className="story-image-side">
+          <img
+            src={brandAmbassador}
+            alt="Brand Ambassador Ariana Grande"
+            className="story-full-image"
+          />
         </div>
 
-        {/* ── Text Content ── */}
-        <div className="story-content">
-          <span className="story-eyebrow">Est. 2020 · Aira Jewels</span>
-          <h2 className="story-title">OUR STORY</h2>
-          <div className="story-title-divider"></div>
+        {/* Right Side: Clean Typography */}
+        <div className="story-text-side">
+          <div className="story-watermark">AIRA</div>
+          
+          <div className="story-text-content">
+            <span className="story-eyebrow">Est. 2020 · Aira Jewels</span>
+            <h2 className="story-title">OUR STORY</h2>
+            <div className="story-title-divider"></div>
 
-          <div className="story-text">
-            <p>
-              We are passionate artisans and designers dedicated to bringing you
-              exquisite jewelry that reflects timeless beauty and modern style. With
-              decades of experience and a deep love for the craft, we create pieces
-              that celebrate life's most precious moments.
-            </p>
-            <p>
-              Discover a world where magic and logic collide, where the
-              transformative power of crystal shines and joyful self-expression brings
-              style fantasies to life. Starring pop icon and Global Brand Ambassador
-              Ariana Grande.
-            </p>
+            <div className="story-paragraphs">
+              <p>
+                We are passionate artisans and designers dedicated to bringing you
+                exquisite jewelry that reflects timeless beauty and modern style. With
+                decades of experience and a deep love for the craft, we create pieces
+                that celebrate life's most precious moments.
+              </p>
+              <p>
+                Discover a world where magic and logic collide, where the
+                transformative power of crystal shines and joyful self-expression brings
+                style fantasies to life. Starring pop icon and Global Brand Ambassador
+                Ariana Grande.
+              </p>
+            </div>
+
+            <button className="story-cta">Discover More</button>
           </div>
-
-          <button className="story-cta">Discover More</button>
         </div>
 
       </div>

@@ -1,11 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 import './OurCollections.css';
+import braceletsImg from '../assets/bracelets-collection.png';
+import ringsImg from '../assets/rings-collection.png';
+import necklacesImg from '../assets/necklaces-collection.png';
+import earringsImg from '../assets/earrings-collection.png';
 
 const collections = [
-  { id: 'rings', title: 'Rings', subtitle: 'Eternity & Engagement' },
-  { id: 'necklaces', title: 'Necklaces', subtitle: 'Statement & Pendants' },
-  { id: 'bracelets', title: 'Bracelets', subtitle: 'Bangles & Chains' },
-  { id: 'earrings', title: 'Earrings', subtitle: 'Studs & Drops' },
+  { id: 'rings', title: 'Rings', subtitle: 'Eternity & Engagement', image: braceletsImg },
+  { id: 'necklaces', title: 'Necklaces', subtitle: 'Statement & Pendants', image: necklacesImg },
+  { id: 'bracelets', title: 'Bracelets', subtitle: 'Bangles & Chains', image: ringsImg },
+  { id: 'earrings', title: 'Earrings', subtitle: 'Studs & Drops', image: earringsImg },
 ];
 
 export default function OurCollections() {
@@ -53,14 +57,11 @@ export default function OurCollections() {
             style={{ transitionDelay: `${index * 0.15}s` }}
           >
             <div className="collection-card-inner">
-              <div className="collection-bg-pattern"></div>
+              <img src={item.image} alt={item.title} className="collection-image" />
+              <div className="collection-bg-overlay"></div>
               <div className="collection-content">
-                <span className="collection-number">0{index + 1}</span>
                 <h3 className="collection-name">{item.title}</h3>
                 <p className="collection-sub">{item.subtitle}</p>
-                <div className="collection-explore">
-                  Explore <span className="explore-arrow">→</span>
-                </div>
               </div>
             </div>
           </div>

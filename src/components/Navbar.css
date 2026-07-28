@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 
 :root {
-  --navbar-height: 80px;
-  --navbar-height-mobile: 70px;
+  --navbar-height: 100px;
+  --navbar-height-mobile: 85px;
   --navbar-bg: #FFFFFF;
   --navbar-bg-transparent: rgba(255, 255, 255, 0.95);
   --navbar-border: #E8D5C4;
@@ -57,14 +57,14 @@
 }
 
 .navbar-logo img {
-  width: 111px;
-  height: 86px;
-  transition: height var(--transition), width var(--transition);
+  width: auto;
+  height: 80px;
+  object-fit: contain;
+  transition: height var(--transition);
 }
 
 .navbar-scrolled .navbar-logo img {
-  width: 90px;
-  height: 69px;
+  height: 60px;
 }
 
 /* Desktop Navigation */

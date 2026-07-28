@@ -1,5 +1,7 @@
 import React from 'react';
 import './KidsCollection.css';
+import kidsTall from '../assets/kids-collection-tall.png';
+import kidsSquare from '../assets/kids-collection-square.png';
 
 const KidsCollection: React.FC = () => {
   return (
@@ -17,14 +19,14 @@ const KidsCollection: React.FC = () => {
         <div className="kids-visuals">
           <div className="kids-image-wrapper img-tall">
             <img 
-              src="https://images.unsplash.com/photo-1519689680058-324335c77eba?auto=format&fit=crop&q=80&w=600" 
+              src={kidsTall} 
               alt="Kids jewelry collection" 
               className="kids-image"
             />
           </div>
           <div className="kids-image-wrapper img-square">
             <img 
-              src="https://images.unsplash.com/photo-1596357395217-80de13130e92?auto=format&fit=crop&q=80&w=500" 
+              src={kidsSquare} 
               alt="Kids delicate necklace" 
               className="kids-image"
             />
