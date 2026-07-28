@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
 
 :root {
-  --navbar-height: 100px;
-  --navbar-height-mobile: 85px;
+  --navbar-height: 70px;
+  --navbar-height-mobile: 65px;
   --navbar-bg: #FFFFFF;
   --navbar-bg-transparent: rgba(255, 255, 255, 0.95);
   --navbar-border: #E8D5C4;
@@ -37,11 +37,6 @@
   animation: slideDown 0.4s ease-out forwards;
 }
 
-.navbar-scrolled {
-  height: calc(var(--navbar-height) * 0.8);
-  background-color: var(--navbar-bg-transparent);
-  box-shadow: var(--navbar-shadow-scrolled);
-}
 
 /* Logo */
 .navbar-logo {
@@ -58,14 +53,11 @@
 
 .navbar-logo img {
   width: auto;
-  height: 80px;
+  height: 50px;
   object-fit: contain;
   transition: height var(--transition);
 }
 
-.navbar-scrolled .navbar-logo img {
-  height: 60px;
-}
 
 /* Desktop Navigation */
 .navbar-menu--desktop {
@@ -472,14 +464,10 @@
   }
 
   .navbar-logo img {
-    width: 80px;
-    height: 62px;
+    width: auto;
+    height: 45px;
   }
   
-  .navbar-scrolled .navbar-logo img {
-    width: 80px;
-    height: 62px;
-  }
 
   .navbar-menu--desktop {
     display: none;

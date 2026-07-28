@@ -5,17 +5,6 @@ import './Navbar.css';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-
-  // Handle scroll behavior
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   // Handle escape key
   useEffect(() => {
@@ -48,7 +37,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`navbar ${isScrolled ? 'navbar-scrolled' : ''}`} role="navigation">
+      <nav className="navbar" role="navigation">
         {/* Logo */}
         <a href="/" className="navbar-logo" onClick={closeMenus}>
           <img src={Logo} alt="Aira Jewels Logo" width="111" height="86" />

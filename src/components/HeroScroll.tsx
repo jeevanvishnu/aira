@@ -9,8 +9,16 @@ const HeroScroll: React.FC = () => {
         <img src={heroBg} alt="Luxury Pearl and Gold Jewelry" className="hero-background-image" />
         <div className="hero-gradient-overlay"></div>
       </div>
+
+      {/* Floating luxury badge — mobile only */}
+      <div className="hero-badge">
+        <span className="hero-badge-text">Hand&shy;crafted{'\n'}Pure Gold</span>
+      </div>
       
       <div className="hero-content">
+        {/* Gold accent line — mobile only */}
+        <div className="hero-accent-line"></div>
+
         <h1 className="hero-headline">
           <span style={{ display: 'block', whiteSpace: 'nowrap' }}>Where Timeless Beauty</span>
           <span style={{ display: 'block', whiteSpace: 'nowrap' }}>Meets Modern Craft</span>
@@ -28,6 +36,7 @@ const HeroScroll: React.FC = () => {
             </svg>
           </button>
         </div>
+
       </div>
     </section>
   );
