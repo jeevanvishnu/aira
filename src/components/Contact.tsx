@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Contact.css';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -25,15 +26,17 @@ const Contact: React.FC = () => {
       <div className="contact-container">
         
         {/* Left Side: Contact Information */}
-        <div className="contact-info-wrapper">
-          <h2 className="contact-title">GET IN TOUCH</h2>
+        <ScrollReveal direction="left" className="contact-info-wrapper">
+          <span className="contact-info-eyebrow">CONNECT</span>
+          <h2 className="contact-title">Get in Touch</h2>
+          <div className="contact-info-divider"></div>
           <p className="contact-subtitle">
-            We invite you to reach out for bespoke inquiries, private viewing appointments, or assistance with our collections.
+            We invite you to reach out for bespoke inquiries, private boutique appointments, or assistance with our collections.
           </p>
           
           <div className="contact-details">
             <div className="contact-detail-item">
-              <MapPin className="contact-icon" size={24} strokeWidth={1.5} />
+              <MapPin className="contact-icon" size={20} strokeWidth={1.5} />
               <div>
                 <h4>Visit Our Boutique</h4>
                 <p>8th Street, Al Ghuwair<br/>Near Rolla Square Park<br/>Rolla - 97629, Sharjah - UAE</p>
@@ -41,7 +44,7 @@ const Contact: React.FC = () => {
             </div>
             
             <div className="contact-detail-item">
-              <Phone className="contact-icon" size={24} strokeWidth={1.5} />
+              <Phone className="contact-icon" size={20} strokeWidth={1.5} />
               <div>
                 <h4>Call Us</h4>
                 <p>+971 50 184 7916<br/>+971 65 64 6425</p>
@@ -49,7 +52,7 @@ const Contact: React.FC = () => {
             </div>
             
             <div className="contact-detail-item">
-              <Mail className="contact-icon" size={24} strokeWidth={1.5} />
+              <Mail className="contact-icon" size={20} strokeWidth={1.5} />
               <div>
                 <h4>Email Us</h4>
                 <p>contact@airajewels.com</p>
@@ -57,17 +60,17 @@ const Contact: React.FC = () => {
             </div>
             
             <div className="contact-detail-item">
-              <Clock className="contact-icon" size={24} strokeWidth={1.5} />
+              <Clock className="contact-icon" size={20} strokeWidth={1.5} />
               <div>
                 <h4>Boutique Hours</h4>
                 <p>Monday - Sunday: 10am - 10pm</p>
               </div>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
 
         {/* Right Side: Contact Form */}
-        <div className="contact-form-wrapper">
+        <ScrollReveal direction="right" className="contact-form-wrapper">
           <h3 className="form-title">Send us a Message</h3>
           <form className="contact-form" onSubmit={handleSubmit}>
             
@@ -122,11 +125,11 @@ const Contact: React.FC = () => {
               <label htmlFor="message">Your Message</label>
             </div>
             
-            <button type="submit" className="contact-submit-btn">
+            <button type="submit" className="btn-gold contact-submit-btn">
               Send Message
             </button>
           </form>
-        </div>
+        </ScrollReveal>
 
       </div>
     </section>
@@ -134,3 +137,4 @@ const Contact: React.FC = () => {
 };
 
 export default Contact;
+

@@ -1,54 +1,74 @@
 .our-brands-section {
-  padding: 120px 3%;
-  background-color: #fff;
+  padding: 120px 0;
+  background-color: var(--color-surface);
+  border-bottom: 1px solid rgba(201, 169, 110, 0.15);
 }
 
 .brands-container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 40px;
 }
 
 .brands-header {
   text-align: center;
-  max-width: 700px;
-  margin: 0 auto 80px auto;
+  margin-bottom: 70px;
+}
+
+.brands-eyebrow {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: block;
 }
 
 .brands-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.2rem;
+  font-family: var(--font-heading);
+  font-size: clamp(34px, 4vw, 48px);
   font-weight: 300;
-  letter-spacing: 0.15em;
-  color: #111;
-  text-transform: uppercase;
-  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  color: var(--color-dark);
+}
+
+.brands-header-divider {
+  width: 60px;
+  height: 1px;
+  background-color: var(--color-gold);
+  margin: 25px auto;
 }
 
 .brands-intro {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #666;
+  font-family: var(--font-body);
+  font-size: 15px;
   font-weight: 300;
+  color: var(--color-text-light);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
 }
 
 .brands-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 40px;
+  gap: 30px;
 }
 
 .brand-card {
   position: relative;
-  background-color: #faf8f5;
-  border: 1px solid rgba(0,0,0,0.03);
+  background-color: var(--color-bg);
+  border: 1px solid rgba(201, 169, 110, 0.15);
   overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 .brand-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  transform: translateY(-8px);
+  border-color: var(--color-gold);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
 }
 
 .brand-card-inner {
@@ -61,33 +81,34 @@
 }
 
 .brand-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 3rem;
-  font-weight: 400;
-  color: #111;
-  margin-bottom: 0.5rem;
-  transition: color 0.3s ease;
+  font-family: var(--font-heading);
+  font-size: 42px;
+  font-weight: 300;
+  color: var(--color-dark);
+  margin-bottom: 8px;
+  letter-spacing: 0.05em;
+  transition: color var(--transition-fast);
 }
 
 .brand-card:hover .brand-name {
-  color: #d4af37; /* Gold highlight on hover */
+  color: var(--color-gold);
 }
 
 .brand-subtitle {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem;
+  font-family: var(--font-body);
+  font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #888;
-  margin-bottom: 30px;
+  color: var(--color-text-light);
+  margin-bottom: 25px;
 }
 
 .brand-line {
   width: 40px;
   height: 1px;
-  background-color: #d4af37;
-  margin-bottom: 30px;
+  background-color: var(--color-gold);
+  margin-bottom: 25px;
   transition: width 0.4s ease;
 }
 
@@ -96,50 +117,58 @@
 }
 
 .brand-description {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.9rem;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 300;
   line-height: 1.7;
-  color: #555;
-  margin-bottom: 40px;
+  color: var(--color-text);
+  margin-bottom: 35px;
   flex-grow: 1;
 }
 
 .brand-explore {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.75rem;
+  font-family: var(--font-body);
+  font-size: 11px;
   font-weight: 500;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  background: transparent;
-  border: none;
-  border-bottom: 1px solid #111;
+  text-decoration: none;
+  color: var(--color-dark);
+  border-bottom: 1px solid var(--color-dark);
   padding-bottom: 4px;
-  color: #111;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
+  transition: var(--transition-fast);
 }
 
 .brand-explore:hover {
-  opacity: 0.6;
+  color: var(--color-gold);
+  border-bottom-color: var(--color-gold);
 }
 
 /* Mobile Responsiveness */
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 991px) {
   .brands-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .brands-grid {
     grid-template-columns: 1fr;
   }
   
   .brand-card-inner {
-    padding: 40px 20px;
-  }
-  
-  .brands-title {
-    font-size: 1.8rem;
+    padding: 50px 30px;
   }
 }
+
+@media screen and (max-width: 575px) {
+  .our-brands-section {
+    padding: 80px 0;
+  }
+  
+  .brands-container {
+    padding: 0 20px;
+  }
+}
+

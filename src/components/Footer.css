@@ -1,18 +1,18 @@
 .footer-classic {
-  background-color: #faf8f5; /* Very soft ivory/blush, classic for luxury */
-  padding: 80px 5% 20px;
-  border-top: 1px solid rgba(0,0,0,0.05);
-  color: #111;
+  background-color: var(--color-dark);
+  padding: 100px 0 30px 0;
+  border-top: 1px solid rgba(201, 169, 110, 0.15);
+  color: var(--color-surface);
 }
 
 .footer-classic-container {
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 40px 60px 40px;
   display: grid;
   grid-template-columns: 2fr 1fr 1.5fr;
-  gap: 60px;
-  padding-bottom: 60px;
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+  gap: 80px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Column 1: Brand */
@@ -23,15 +23,16 @@
 }
 
 .footer-logo {
-  height: 45px;
+  height: 50px;
   margin-bottom: 25px;
+  filter: brightness(0) invert(1); /* Invert to make logo text white on dark bg */
 }
 
 .footer-description {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.95rem;
-  line-height: 1.8;
-  color: #666;
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.6);
   font-weight: 300;
   max-width: 350px;
   margin-bottom: 30px;
@@ -43,29 +44,30 @@
 }
 
 .footer-social-icons a {
-  color: #111;
-  transition: transform 0.3s ease, color 0.3s ease;
+  color: rgba(255, 255, 255, 0.6);
+  transition: var(--transition-fast);
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .footer-social-icons a:hover {
-  color: #d4af37;
+  color: var(--color-gold);
   transform: translateY(-3px);
 }
 
-/* Column 2: Links */
-.footer-col-links h4, .footer-col-contact h4 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
+/* Column titles */
+.footer-title {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-bottom: 30px;
-  color: #111;
+  color: var(--color-gold);
 }
 
+/* Column 2: Links */
 .footer-col-links nav {
   display: flex;
   flex-direction: column;
@@ -73,17 +75,19 @@
 }
 
 .footer-col-links a {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.95rem;
-  color: #555;
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
   text-decoration: none;
   font-weight: 300;
-  transition: color 0.3s ease;
+  transition: var(--transition-fast);
   width: fit-content;
+  letter-spacing: 0.02em;
 }
 
 .footer-col-links a:hover {
-  color: #d4af37;
+  color: var(--color-gold);
+  padding-left: 5px;
 }
 
 /* Column 3: Contact */
@@ -92,94 +96,129 @@
 }
 
 .contact-address p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.95rem;
+  font-family: var(--font-body);
+  font-size: 14px;
   line-height: 1.6;
-  color: #555;
+  color: rgba(255, 255, 255, 0.65);
   font-weight: 300;
   margin: 0;
 }
 
-.contact-details p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.9rem;
-  color: #444;
+.contact-details-footer p {
+  font-family: var(--font-body);
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
   font-weight: 300;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
-.contact-details strong {
+.contact-details-footer strong {
   font-weight: 500;
-  color: #111;
+  color: var(--color-gold-light);
+  margin-right: 5px;
 }
 
-.contact-details a {
-  color: #111;
+.contact-details-footer a {
+  color: rgba(255, 255, 255, 0.65);
   text-decoration: none;
-  font-weight: 400;
-  transition: color 0.3s ease;
+  transition: var(--transition-fast);
 }
 
-.contact-details a:hover {
-  color: #d4af37;
+.contact-details-footer a:hover {
+  color: var(--color-gold);
 }
 
 /* Bottom Bar */
 .footer-classic-bottom {
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding-top: 25px;
+  padding: 30px 40px 0 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .footer-classic-bottom p {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem;
-  color: #888;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.4);
   font-weight: 300;
 }
 
-.footer-bottom-links {
+.footer-scroll-top-btn {
+  background: none;
+  border: none;
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: var(--color-gold);
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: var(--transition-fast);
+}
+
+.footer-scroll-top-btn:hover {
+  color: var(--color-gold-light);
+  transform: translateY(-2px);
+}
+
+/* Floating WhatsApp FAB - Gold Style */
+.whatsapp-float {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--color-gold);
+  color: var(--color-dark);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
   display: flex;
-  gap: 25px;
-}
-
-.footer-bottom-links a {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.85rem;
-  color: #888;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 5px 25px rgba(201, 169, 110, 0.3);
+  z-index: 999;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+              background-color 0.3s ease, 
+              box-shadow 0.3s ease;
   text-decoration: none;
-  font-weight: 300;
-  transition: color 0.3s ease;
 }
 
-.footer-bottom-links a:hover {
-  color: #111;
+.whatsapp-float:hover {
+  transform: scale(1.1) rotate(5deg);
+  background-color: var(--color-gold-light);
+  box-shadow: 0 8px 30px rgba(201, 169, 110, 0.5);
 }
 
 /* Mobile Responsiveness */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   .footer-classic-container {
     grid-template-columns: 1fr 1fr;
     gap: 50px;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 767px) {
   .footer-classic {
-    padding: 60px 16px 20px;
+    padding: 80px 0 30px 0;
   }
-  
+
   .footer-classic-container {
     grid-template-columns: 1fr;
     gap: 40px;
+    padding: 0 20px 40px 20px;
   }
   
   .footer-classic-bottom {
-    flex-direction: column;
+    flex-direction: column-reverse;
     gap: 15px;
     text-align: center;
+    padding: 20px 20px 0 20px;
+  }
+  
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
   }
 }
+

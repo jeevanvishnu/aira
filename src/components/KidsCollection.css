@@ -1,68 +1,62 @@
 .kids-collection-section {
-  padding: 120px 3%;
-  background-color: #faf7f2; /* Soft ivory/cream to feel gentle and playful yet luxurious */
+  padding: 120px 0;
+  background-color: var(--color-bg);
   overflow: hidden;
+  border-bottom: 1px solid rgba(201, 169, 110, 0.15);
 }
 
 .kids-container {
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 40px;
   display: flex;
   align-items: center;
   gap: 80px;
 }
 
 .kids-content {
-  flex: 1;
-  max-width: 500px;
+  flex: 0 0 45%;
+  max-width: 480px;
 }
 
-.kids-subtitle {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.5rem;
-  font-style: italic;
-  color: #d4af37; /* Gentle gold */
-  margin-bottom: 1rem;
-  letter-spacing: 0.05em;
+.kids-eyebrow {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  display: block;
 }
 
 .kids-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.5rem;
+  font-family: var(--font-heading);
+  font-size: clamp(34px, 4vw, 48px);
   font-weight: 300;
-  letter-spacing: 0.15em;
-  color: #111;
-  margin-bottom: 1.5rem;
-  text-transform: uppercase;
+  line-height: 1.2;
+  color: var(--color-dark);
+  margin-bottom: 25px;
+}
+
+.kids-divider {
+  width: 60px;
+  height: 1px;
+  background-color: var(--color-gold);
+  margin-bottom: 30px;
 }
 
 .kids-description {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.95rem;
-  line-height: 1.8;
-  color: #555;
-  margin-bottom: 2.5rem;
+  font-family: var(--font-body);
+  font-size: 15px;
   font-weight: 300;
+  line-height: 1.8;
+  color: var(--color-text);
+  margin-bottom: 40px;
 }
 
 .kids-btn {
-  display: inline-block;
-  padding: 14px 32px;
-  background-color: #111;
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.8rem;
-  font-weight: 500;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  border: 1px solid #111;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.kids-btn:hover {
-  background-color: transparent;
-  color: #111;
+  transition: var(--transition-fast);
 }
 
 /* Visuals - Overlapping Layout */
@@ -72,100 +66,98 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  min-height: 550px;
+  min-height: 580px;
 }
 
 .kids-image-wrapper {
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(201, 169, 110, 0.15);
 }
 
 .img-tall {
-  width: 70%;
+  width: 68%;
   aspect-ratio: 3 / 4;
   position: relative;
   z-index: 1;
 }
 
 .img-square {
-  width: 45%;
+  width: 46%;
   aspect-ratio: 1 / 1;
   position: absolute;
   left: 0;
-  bottom: 10%;
+  bottom: 8%;
   z-index: 2;
-  border: 10px solid #faf7f2; /* matches background to create a cutout effect */
+  border: 12px solid var(--color-bg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
 .kids-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
-.kids-visuals:hover .kids-image {
+.kids-image-wrapper:hover .kids-image {
   transform: scale(1.05);
 }
 
 /* Mobile Responsiveness */
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   .kids-container {
     flex-direction: column;
     gap: 60px;
   }
-  
+
   .kids-content {
-    max-width: 100%;
+    flex: 0 0 100%;
+    max-width: 600px;
     text-align: center;
-    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
+  .kids-divider {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .kids-visuals {
     width: 100%;
     justify-content: center;
-    min-height: 400px;
-  }
-  
-  .img-tall {
-    width: 80%;
-  }
-  
-  .img-square {
-    width: 50%;
-    left: -10px;
-    bottom: -20px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .kids-collection-section {
-    padding: 80px 16px;
-  }
-  
-  .kids-title {
-    font-size: 1.8rem;
-    letter-spacing: 0.1em;
-  }
-  
-  .kids-subtitle {
-    font-size: 1.2rem;
+    min-height: 480px;
   }
 
-  .kids-visuals {
-    min-height: 340px;
-    width: 100%;
-  }
-  
   .img-tall {
     width: 75%;
   }
-  
+
   .img-square {
-    display: block;
-    width: 42%;
-    left: 0;
-    bottom: -15px;
-    border-width: 6px;
+    width: 48%;
+    left: 5%;
+    bottom: -5%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .kids-collection-section {
+    padding: 80px 0;
+  }
+
+  .kids-container {
+    padding: 0 20px;
+  }
+
+  .kids-visuals {
+    min-height: 380px;
+  }
+
+  .img-square {
+    border-width: 8px;
+    left: 2%;
+    bottom: -3%;
   }
 }

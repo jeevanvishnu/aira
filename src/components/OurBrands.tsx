@@ -1,5 +1,6 @@
 import React from 'react';
 import './OurBrands.css';
+import ScrollReveal from './ScrollReveal';
 
 const brands = [
   {
@@ -26,14 +27,16 @@ const OurBrands: React.FC = () => {
   return (
     <section className="our-brands-section">
       <div className="brands-container">
-        <div className="brands-header">
-          <h2 className="brands-title">OUR BRANDS</h2>
+        <ScrollReveal direction="up" className="brands-header">
+          <span className="brands-eyebrow">HOUSE OF AIRA</span>
+          <h2 className="brands-title">Our Brands</h2>
+          <div className="brands-header-divider"></div>
           <p className="brands-intro">
             Modern artistry and timeless elegance. Our sub-brands celebrate fine craftsmanship with designs that speak to your unique style.
           </p>
-        </div>
+        </ScrollReveal>
         
-        <div className="brands-grid">
+        <ScrollReveal direction="up" delay={0.2} className="brands-grid">
           {brands.map((brand) => (
             <div key={brand.id} className="brand-card">
               <div className="brand-card-inner">
@@ -41,13 +44,17 @@ const OurBrands: React.FC = () => {
                 <h4 className="brand-subtitle">{brand.subtitle}</h4>
                 <div className="brand-line"></div>
                 <p className="brand-description">{brand.description}</p>
+                <a href="#contact" className="brand-explore">
+                  Discover Brand
+                </a>
               </div>
             </div>
           ))}
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
 };
 
 export default OurBrands;
+

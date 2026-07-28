@@ -3,6 +3,7 @@ import './BridalCollection.css';
 import bridalMain from '../assets/bridal-main.png';
 import bridalNecklace from '../assets/bridal-necklace.png';
 import bridalRings from '../assets/bridal-rings.png';
+import ScrollReveal from './ScrollReveal';
 
 const BridalCollection: React.FC = () => {
   return (
@@ -10,25 +11,30 @@ const BridalCollection: React.FC = () => {
       <div className="bridal-container">
         
         {/* Text Block - Left Side */}
-        <div className="bridal-text-block">
-          <h4 className="bridal-subtitle">The Bridal Edit</h4>
-          <h2 className="bridal-title">EVERLASTING ELEGANCE</h2>
+        <ScrollReveal direction="left" className="bridal-text-block">
+          <span className="bridal-eyebrow">THE BRIDAL EDIT</span>
+          <h2 className="bridal-title">Everlasting Elegance</h2>
           <div className="bridal-divider"></div>
           <p className="bridal-description">
-            Celebrate your most precious moments with masterpieces crafted for eternity. Our exclusive bridal collection meticulously blends traditional heritage with contemporary design, ensuring you shine with unmatched brilliance on your special day.
+            Celebrate your most precious moments with masterpieces crafted for eternity. 
+            Our exclusive bridal collection meticulously blends traditional heritage with contemporary design, 
+            ensuring you shine with unmatched brilliance on your special day.
           </p>
-          <button className="bridal-btn" onClick={() => window.location.href = '#contact'}>Explore The Collection</button>
-        </div>
+          <a href="#contact" className="btn-outline-gold bridal-btn">
+            Explore The Collection
+          </a>
+        </ScrollReveal>
 
         {/* Image Grid - Right Side */}
-        <div className="bridal-grid">
+        <ScrollReveal direction="right" className="bridal-grid">
           {/* Main Tall Image */}
           <div className="bridal-img-wrapper tall-img">
             <img 
               src={bridalMain} 
-              alt="Bridal Jewelry" 
+              alt="Bridal Jewelry Collection" 
               className="bridal-img" 
             />
+            <div className="bridal-overlay"></div>
           </div>
           
           {/* Stacked Smaller Images */}
@@ -39,16 +45,18 @@ const BridalCollection: React.FC = () => {
                 alt="Bridal Necklace Close-up" 
                 className="bridal-img" 
               />
+              <div className="bridal-overlay"></div>
             </div>
             <div className="bridal-img-wrapper small-img">
               <img 
                 src={bridalRings} 
-                alt="Bridal Rings" 
+                alt="Bridal Rings Close-up" 
                 className="bridal-img" 
               />
+              <div className="bridal-overlay"></div>
             </div>
           </div>
-        </div>
+        </ScrollReveal>
 
       </div>
     </section>
@@ -56,3 +64,4 @@ const BridalCollection: React.FC = () => {
 };
 
 export default BridalCollection;
+

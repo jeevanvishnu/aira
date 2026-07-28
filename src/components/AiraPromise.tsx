@@ -7,51 +7,59 @@ import {
   Gem, 
   Sparkles, 
   Award, 
-  Tag 
+  Tag,
+  Package
 } from 'lucide-react';
+import ScrollReveal from './ScrollReveal';
 
 const promises = [
   {
     id: 1,
-    title: '100% VALUE ON GOLD EXCHANGE',
-    description: 'we give full value exchange without any deduction on gold jewellery purchased from us',
-    icon: <RefreshCw size={32} strokeWidth={1.5} />,
+    title: '100% Value Gold Exchange',
+    description: 'We give full value exchange without any deduction on gold jewellery purchased from us.',
+    icon: <RefreshCw size={28} strokeWidth={1} />,
   },
   {
     id: 2,
-    title: '100% HALLMARKED PURE GOLD',
-    description: 'our all gold jewellery hallmarked to assure the best purity when you buy',
-    icon: <BadgeCheck size={32} strokeWidth={1.5} />,
+    title: '100% Hallmarked Pure Gold',
+    description: 'All our gold jewellery is hallmarked to assure the best purity when you buy.',
+    icon: <BadgeCheck size={28} strokeWidth={1} />,
   },
   {
     id: 3,
-    title: 'GUARANTEED BUYBACK',
-    description: 'we offer buyback of all our products to ensure you get the best value',
-    icon: <ShieldCheck size={32} strokeWidth={1.5} />,
+    title: 'Guaranteed Buyback Value',
+    description: 'We offer hassle-free buyback on all our products to protect your investment.',
+    icon: <ShieldCheck size={28} strokeWidth={1} />,
   },
   {
     id: 4,
-    title: 'ASSURED DIAMOND EXCHANGE VALUE',
-    description: 'our all gold jewellery hallmarked to assure the best purity when you buy',
-    icon: <Gem size={32} strokeWidth={1.5} />,
+    title: 'Assured Diamond Exchange',
+    description: 'Special trade-in values for diamonds to help you upgrade your legacy.',
+    icon: <Gem size={28} strokeWidth={1} />,
   },
   {
     id: 5,
-    title: 'LIFETIME MAINTENANCE',
-    description: 'we offer lifetime free maintenance for the jewellery to ensure that it makes you shine forever',
-    icon: <Sparkles size={32} strokeWidth={1.5} />,
+    title: 'Lifetime Free Maintenance',
+    description: 'Enjoy free polishing and maintenance to ensure your items shine forever.',
+    icon: <Sparkles size={28} strokeWidth={1} />,
   },
   {
     id: 6,
-    title: 'CERTIFIED DIAMONDS',
-    description: 'all the diamonds you buy from us are certified by internationally accredited laboratories',
-    icon: <Award size={32} strokeWidth={1.5} />,
+    title: 'Certified Fine Diamonds',
+    description: 'All diamonds you buy are certified by internationally accredited laboratories.',
+    icon: <Award size={28} strokeWidth={1} />,
   },
   {
     id: 7,
-    title: 'TRANSPARENT PRICING',
-    description: 'we provide exact details of the components of jewellery like gold weight and stone weight, making charges, taxes, etc',
-    icon: <Tag size={32} strokeWidth={1.5} />,
+    title: 'Transparent Pricing Details',
+    description: 'Complete breakdowns of gold weight, stones, making charges, and taxes.',
+    icon: <Tag size={28} strokeWidth={1} />,
+  },
+  {
+    id: 8,
+    title: 'Free Insured Delivery',
+    description: 'Your precious items are fully insured during transit until they reach you safely.',
+    icon: <Package size={28} strokeWidth={1} />,
   },
 ];
 
@@ -59,9 +67,13 @@ const AiraPromise: React.FC = () => {
   return (
     <section className="aira-promise-section">
       <div className="promise-container">
-        <h2 className="promise-main-title">AIRA ASSURANCE</h2>
+        <ScrollReveal direction="up" className="promise-header">
+          <span className="promise-eyebrow">OUR COMMITMENT</span>
+          <h2 className="promise-main-title">The Aira Assurance</h2>
+          <div className="promise-header-divider"></div>
+        </ScrollReveal>
         
-        <div className="promise-grid">
+        <ScrollReveal direction="up" delay={0.2} className="promise-grid">
           {promises.map((promise) => (
             <div key={promise.id} className="promise-item">
               <div className="promise-icon-wrapper">
@@ -71,10 +83,11 @@ const AiraPromise: React.FC = () => {
               <p className="promise-description">{promise.description}</p>
             </div>
           ))}
-        </div>
+        </ScrollReveal>
       </div>
     </section>
   );
 };
 
 export default AiraPromise;
+

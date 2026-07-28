@@ -1,91 +1,125 @@
 .promotional-banner {
   display: flex;
   width: 100%;
-  height: 60vh; /* Adjust height based on preference, 60vh gives a nice cinematic banner look */
-  min-height: 450px;
-  background-color: #eabda7; /* Match the reference blush pink */
+  height: 650px;
+  background-color: var(--color-bg);
   overflow: hidden;
+  border-top: 1px solid rgba(201, 169, 110, 0.15);
+  border-bottom: 1px solid rgba(201, 169, 110, 0.15);
 }
 
 .promotional-banner-image-container {
-  flex: 0 0 45%;
+  flex: 0 0 50%;
   height: 100%;
+  position: relative;
 }
 
 .promotional-banner-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center; /* Center the model's face */
+  object-position: center;
   display: block;
 }
 
+.promotional-banner-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent 70%,
+    rgba(250, 247, 242, 0.2) 100%
+  );
+}
+
 .promotional-banner-content-container {
-  flex: 1;
+  flex: 0 0 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 40px;
+  padding: 60px 8%;
+  background-color: #FAF7F2;
 }
 
 .promotional-banner-content {
-  max-width: 600px;
-  text-align: left;
-  color: #111111;
+  max-width: 480px;
+}
+
+.promotional-banner-tagline {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: block;
 }
 
 .promotional-banner-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.2rem;
-  font-weight: 400;
-  letter-spacing: 0.1em;
-  line-height: 1.4;
-  margin-bottom: 2rem;
-  text-transform: uppercase;
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 3.5vw, 45px);
+  font-weight: 300;
+  line-height: 1.25;
+  color: var(--color-dark);
+  margin-bottom: 25px;
+}
+
+.promotional-banner-divider {
+  width: 50px;
+  height: 1px;
+  background-color: var(--color-gold);
+  margin-bottom: 25px;
 }
 
 .promotional-banner-description {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.15em;
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 300;
   line-height: 1.8;
-  text-transform: uppercase;
-  color: #222222;
+  color: var(--color-text);
+  margin-bottom: 40px;
+}
+
+.promotional-banner-cta {
+  transition: var(--transition-fast);
 }
 
 /* Mobile Responsiveness */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
   .promotional-banner {
     flex-direction: column;
     height: auto;
-    min-height: auto;
   }
 
   .promotional-banner-image-container {
     width: 100%;
-    height: 350px; /* Fixed height for image on mobile */
+    height: 400px;
   }
 
   .promotional-banner-content-container {
-    padding: 50px 20px;
+    width: 100%;
+    padding: 80px 30px;
     text-align: center;
+    justify-content: center;
   }
   
   .promotional-banner-content {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .promotional-banner-title {
-    font-size: 1.6rem;
-    margin-bottom: 1.5rem;
+  .promotional-banner-divider {
+    margin-left: auto;
+    margin-right: auto;
   }
-
+  
   .promotional-banner-description {
-    font-size: 0.7rem;
-  }
-
-  .hidden-mobile {
-    display: none;
+    max-width: 500px;
   }
 }
+
