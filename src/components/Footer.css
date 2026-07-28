@@ -1,0 +1,243 @@
+.footer-section {
+  background-color: #fff;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  color: #111;
+  padding: 0 3%;
+}
+
+/* Newsletter Section */
+.footer-newsletter {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.newsletter-text h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  color: #111;
+}
+
+.newsletter-text p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: #666;
+  font-weight: 300;
+}
+
+.newsletter-form {
+  display: flex;
+  width: 100%;
+  max-width: 500px;
+  border-bottom: 1px solid #111;
+}
+
+.newsletter-form input {
+  flex: 1;
+  border: none;
+  background: transparent;
+  padding: 15px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  color: #111;
+  outline: none;
+}
+
+.newsletter-form input::placeholder {
+  color: #aaa;
+  font-weight: 300;
+}
+
+.newsletter-form button {
+  background: transparent;
+  border: none;
+  color: #111;
+  cursor: pointer;
+  padding: 0 10px;
+  transition: transform 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  transform: translateX(5px);
+}
+
+/* Main Footer Area */
+.footer-main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 100px 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 60px;
+}
+
+.brand-col {
+  padding-right: 40px;
+}
+
+.footer-logo {
+  height: 80px; /* Adjust based on actual logo proportion */
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.footer-brand-desc {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.8;
+  color: #666;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-socials a {
+  color: #111;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.footer-socials a:hover {
+  color: #d4af37;
+  transform: translateY(-3px);
+}
+
+.footer-col h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: #111;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col ul li {
+  margin-bottom: 1.2rem;
+}
+
+.footer-col ul li a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: #666;
+  text-decoration: none;
+  font-weight: 300;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.footer-col ul li a:hover {
+  color: #d4af37;
+}
+
+.boutique-info li {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.location-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #111 !important;
+  font-weight: 500 !important;
+  margin-bottom: 1rem !important;
+}
+
+.location-icon {
+  color: #d4af37;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 30px 0;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-bottom p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  color: #888;
+  font-weight: 300;
+}
+
+.footer-legal {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-legal a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  color: #888;
+  text-decoration: none;
+  font-weight: 300;
+  transition: color 0.3s ease;
+}
+
+.footer-legal a:hover {
+  color: #111;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 1200px) {
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer-newsletter {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 60px 0;
+  }
+  
+  .newsletter-form {
+    max-width: 100%;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    padding: 60px 0;
+    gap: 40px;
+  }
+  
+  .brand-col {
+    padding-right: 0;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}

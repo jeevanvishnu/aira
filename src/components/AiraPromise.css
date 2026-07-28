@@ -1,0 +1,106 @@
+.aira-promise-section {
+  padding: 120px 3%;
+  background-color: #FFF8F5; /* Keep the soft cream background for consistency */
+}
+
+.promise-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.promise-main-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  color: #111;
+  text-align: center;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+}
+
+.promise-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.promise-item {
+  flex: 0 1 calc(25% - 30px); /* 4 items per row */
+  min-width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 30px 20px;
+  transition: transform 0.3s ease;
+}
+
+.promise-item:hover {
+  transform: translateY(-5px);
+}
+
+.promise-icon-wrapper {
+  color: #d4af37; /* Aira Gold */
+  margin-bottom: 25px;
+  padding: 20px;
+  background-color: rgba(212, 175, 55, 0.05);
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.promise-item:hover .promise-icon-wrapper {
+  background-color: #d4af37;
+  color: #fff;
+}
+
+.promise-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: #111;
+  margin-bottom: 15px;
+  line-height: 1.4;
+}
+
+.promise-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  line-height: 1.7;
+  color: #666;
+  font-weight: 400;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 1200px) {
+  .promise-item {
+    flex: 0 1 calc(33.333% - 27px); /* 3 items per row */
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .promise-item {
+    flex: 0 1 calc(50% - 20px); /* 2 items per row */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .aira-promise-section {
+    padding: 80px 16px;
+  }
+  
+  .promise-item {
+    flex: 0 1 100%; /* 1 item per row */
+    padding: 20px 10px;
+  }
+  
+  .promise-main-title {
+    font-size: 1.8rem;
+    margin-bottom: 50px;
+  }
+}

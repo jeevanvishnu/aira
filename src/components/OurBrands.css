@@ -1,0 +1,145 @@
+.our-brands-section {
+  padding: 120px 3%;
+  background-color: #fff;
+}
+
+.brands-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.brands-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 80px auto;
+}
+
+.brands-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  color: #111;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.brands-intro {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #666;
+  font-weight: 300;
+}
+
+.brands-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.brand-card {
+  position: relative;
+  background-color: #faf8f5;
+  border: 1px solid rgba(0,0,0,0.03);
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.brand-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+}
+
+.brand-card-inner {
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+}
+
+.brand-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #111;
+  margin-bottom: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.brand-card:hover .brand-name {
+  color: #d4af37; /* Gold highlight on hover */
+}
+
+.brand-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.brand-line {
+  width: 40px;
+  height: 1px;
+  background-color: #d4af37;
+  margin-bottom: 30px;
+  transition: width 0.4s ease;
+}
+
+.brand-card:hover .brand-line {
+  width: 80px;
+}
+
+.brand-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #555;
+  margin-bottom: 40px;
+  flex-grow: 1;
+}
+
+.brand-explore {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #111;
+  padding-bottom: 4px;
+  color: #111;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.brand-explore:hover {
+  opacity: 0.6;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 1024px) {
+  .brands-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .brands-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .brand-card-inner {
+    padding: 40px 20px;
+  }
+  
+  .brands-title {
+    font-size: 1.8rem;
+  }
+}

@@ -1,0 +1,183 @@
+.bridal-section {
+  padding: 120px 3%;
+  background-color: #fff; /* Clean white background for a professional look */
+}
+
+.bridal-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 4fr 8fr; /* 1/3 text, 2/3 images */
+  gap: 60px;
+  align-items: center;
+}
+
+/* Text Block */
+.bridal-text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 20px;
+}
+
+.bridal-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  color: #888;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.bridal-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  font-weight: 400;
+  color: #111;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+}
+
+.bridal-divider {
+  width: 50px;
+  height: 2px;
+  background-color: #d4af37; /* Aira Gold */
+  margin-bottom: 2rem;
+}
+
+.bridal-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: #555;
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+
+.bridal-btn {
+  align-self: flex-start;
+  padding: 15px 35px;
+  background-color: #111;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid #111;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bridal-btn:hover {
+  background-color: transparent;
+  color: #111;
+}
+
+/* Image Grid */
+.bridal-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr; /* Tall image is slightly wider than the stacked ones */
+  gap: 24px;
+  height: 650px; /* Fixed height to create a perfect masonry block */
+}
+
+.bridal-img-wrapper {
+  overflow: hidden;
+  background-color: #f5f5f5;
+  width: 100%;
+  height: 100%;
+}
+
+.bridal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.bridal-img-wrapper:hover .bridal-img {
+  transform: scale(1.05);
+}
+
+.tall-img {
+  height: 100%;
+}
+
+.bridal-stacked-imgs {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  height: 100%;
+}
+
+.small-img {
+  height: calc(50% - 12px); /* Half height minus half the gap */
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 1200px) {
+  .bridal-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .bridal-text-block {
+    text-align: center;
+    align-items: center;
+    padding-right: 0;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .bridal-btn {
+    align-self: center;
+  }
+  
+  .bridal-divider {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bridal-section {
+    padding: 80px 16px;
+  }
+
+  .bridal-title {
+    font-size: 2.5rem;
+  }
+
+  .bridal-grid {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  
+  .tall-img {
+    height: 400px;
+  }
+  
+  .bridal-stacked-imgs {
+    flex-direction: row;
+    height: 250px;
+  }
+  
+  .small-img {
+    height: 100%;
+    width: calc(50% - 12px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .bridal-stacked-imgs {
+    flex-direction: column;
+    height: 500px;
+  }
+  
+  .small-img {
+    width: 100%;
+    height: calc(50% - 12px);
+  }
+}

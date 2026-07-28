@@ -1,0 +1,91 @@
+.promotional-banner {
+  display: flex;
+  width: 100%;
+  height: 60vh; /* Adjust height based on preference, 60vh gives a nice cinematic banner look */
+  min-height: 450px;
+  background-color: #eabda7; /* Match the reference blush pink */
+  overflow: hidden;
+}
+
+.promotional-banner-image-container {
+  flex: 0 0 45%;
+  height: 100%;
+}
+
+.promotional-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center; /* Center the model's face */
+  display: block;
+}
+
+.promotional-banner-content-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+.promotional-banner-content {
+  max-width: 600px;
+  text-align: left;
+  color: #111111;
+}
+
+.promotional-banner-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 1.4;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.promotional-banner-description {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  line-height: 1.8;
+  text-transform: uppercase;
+  color: #222222;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .promotional-banner {
+    flex-direction: column;
+    height: auto;
+    min-height: auto;
+  }
+
+  .promotional-banner-image-container {
+    width: 100%;
+    height: 350px; /* Fixed height for image on mobile */
+  }
+
+  .promotional-banner-content-container {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .promotional-banner-content {
+    text-align: center;
+  }
+
+  .promotional-banner-title {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .promotional-banner-description {
+    font-size: 0.7rem;
+  }
+
+  .hidden-mobile {
+    display: none;
+  }
+}

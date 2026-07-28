@@ -1,0 +1,208 @@
+.contact-section {
+  padding: 120px 3%;
+  background-color: #faf8f5; /* Subtle blush/ivory background */
+  display: flex;
+  justify-content: center;
+}
+
+.contact-container {
+  max-width: 1200px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  background-color: #fff;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.04);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* Left Side: Info */
+.contact-info-wrapper {
+  background-color: #111; /* Dark premium contrast */
+  color: #fff;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.contact-subtitle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #aaa;
+  margin-bottom: 3rem;
+  font-weight: 300;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: auto;
+}
+
+.contact-detail-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.contact-icon {
+  color: #d4af37; /* Aira Gold */
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contact-detail-item h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.contact-detail-item p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #aaa;
+  font-weight: 300;
+}
+
+/* Right Side: Form */
+.contact-form-wrapper {
+  padding: 80px 60px;
+  background-color: #fff;
+}
+
+.form-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #111;
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Floating Label Inputs */
+.form-group {
+  position: relative;
+  width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 15px 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: #111;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+  transition: border-color 0.3s ease;
+  resize: none; /* prevent textarea resizing */
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-bottom-color: #111;
+}
+
+.form-group label {
+  position: absolute;
+  top: 15px;
+  left: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  color: #888;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  font-weight: 300;
+}
+
+/* When input is focused, or has content (placeholder=" " is used with :not(:placeholder-shown)) */
+.form-group input:focus ~ label,
+.form-group input:not(:placeholder-shown) ~ label,
+.form-group textarea:focus ~ label,
+.form-group textarea:not(:placeholder-shown) ~ label {
+  top: -12px;
+  font-size: 0.75rem;
+  color: #111;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.contact-submit-btn {
+  margin-top: 20px;
+  padding: 16px 32px;
+  background-color: #111;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  border: 1px solid #111;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.contact-submit-btn:hover {
+  background-color: #d4af37;
+  border-color: #d4af37;
+  color: #fff;
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 992px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-info-wrapper {
+    padding: 60px 40px;
+  }
+  
+  .contact-form-wrapper {
+    padding: 60px 40px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact-section {
+    padding: 80px 16px;
+  }
+  
+  .contact-info-wrapper,
+  .contact-form-wrapper {
+    padding: 40px 20px;
+  }
+  
+  .contact-title {
+    font-size: 2rem;
+  }
+  
+  .contact-submit-btn {
+    width: 100%;
+  }
+}

@@ -2,6 +2,14 @@ import Navbar from './components/Navbar';
 import HeroScroll from './components/HeroScroll';
 import OurStory from './components/OurStory';
 import OurCollections from './components/OurCollections';
+import PromotionalBanner from './components/PromotionalBanner';
+import TrendingNow from './components/TrendingNow';
+import KidsCollection from './components/KidsCollection';
+import OurBrands from './components/OurBrands';
+import AiraPromise from './components/AiraPromise';
+import BridalCollection from './components/BridalCollection';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 const App = () => {
   return (
@@ -10,14 +18,14 @@ const App = () => {
       <HeroScroll />
       <OurStory />
       <OurCollections />
-      <div className="content-wrapper">
-        <section id="gallery" style={{ height: '100vh', padding: '40px' }}>
-          <h1>Gallery</h1>
-        </section>
-        <section id="contact" style={{ height: '100vh', padding: '40px', backgroundColor: '#fcfcfc' }}>
-          <h1>Contact</h1>
-        </section>
-      </div>
+      <PromotionalBanner />
+      <TrendingNow />
+      <KidsCollection />
+      <BridalCollection />
+      <OurBrands />
+      <AiraPromise />
+      <Contact />
+      <Footer />
     </>
   );
 };
