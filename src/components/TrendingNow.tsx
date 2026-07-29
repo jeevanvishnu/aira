@@ -56,7 +56,7 @@ const TrendingNow: React.FC = () => {
 
         {/* Right Side: Full-bleed image cards */}
         <div className="trending-grid">
-          {trendingCategories.map((category, index) => (
+          {trendingCategories.map((category) => (
             <div key={category.id} className="category-card">
               <div className="category-image-container">
                 <img src={category.image} alt={category.name} className="category-image" />

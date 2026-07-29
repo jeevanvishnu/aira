@@ -24,7 +24,7 @@ const OurCollections: React.FC = () => {
       </ScrollReveal>
 
       <div className="collections-grid">
-        {collections.map((item, index) => (
+        {collections.map((item) => (
           <div key={item.id} className="collection-card">
             <div className="collection-card-inner">
               <img src={item.image} alt={item.title} className="collection-image" />
