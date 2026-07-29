@@ -8,21 +8,20 @@ const OurStory: React.FC = () => {
     <section id="about" className="story-section">
       <div className="story-container">
         
-        {/* Left Side: Editorial Image */}
-        <ScrollReveal direction="left" className="story-image-side">
-          <div className="story-image-wrapper">
+        {/* Left Side: Edge-to-Edge Image */}
+        <ScrollReveal direction="left" className="story-visuals">
+          <div className="story-image-main">
             <img
               src={brandAmbassador}
               alt="Aira Jewels Brand Ambassador"
-              className="story-image"
+              className="story-img"
             />
-            <div className="story-image-overlay"></div>
           </div>
         </ScrollReveal>
 
-        {/* Right Side: Editorial Content */}
-        <ScrollReveal direction="right" className="story-text-side">
-          <div className="story-text-content">
+        {/* Right Side: Clean Editorial Content */}
+        <ScrollReveal direction="right" className="story-content-wrapper">
+          <div className="story-text-card">
             <span className="story-eyebrow">THE BRAND</span>
             <h2 className="story-title">Crafting Legacies of Light & Gold</h2>
             <div className="story-divider"></div>
@@ -37,6 +36,15 @@ const OurStory: React.FC = () => {
                 Every piece is a collaborative journey of artistry, precision, and soul. From delicate daily diamonds 
                 to majestic bridal heirlooms, we compose stories of grace, brilliance, and joyous self-expression.
               </p>
+            </div>
+
+            {/* Subtle Milestones */}
+            <div className="story-milestones-minimal">
+              <span>1998 Heritage</span>
+              <span className="dot">•</span>
+              <span>100% Ethical</span>
+              <span className="dot">•</span>
+              <span>Artisan Crafted</span>
             </div>
             
             <a href="#collections" className="btn-outline-gold story-cta">

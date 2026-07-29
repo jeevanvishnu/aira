@@ -110,12 +110,14 @@
   color: rgba(255, 255, 255, 0.65);
   font-weight: 300;
   margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.contact-details-footer strong {
-  font-weight: 500;
+.contact-details-footer .footer-contact-icon {
   color: var(--color-gold-light);
-  margin-right: 5px;
+  flex-shrink: 0;
 }
 
 .contact-details-footer a {

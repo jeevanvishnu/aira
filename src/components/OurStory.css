@@ -2,74 +2,56 @@
   padding: 120px 0;
   background-color: var(--color-bg);
   overflow: hidden;
-  position: relative;
 }
 
 .story-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 80px;
+  align-items: stretch;
 }
 
-/* Image Wrapper with overlay and border highlights */
-.story-image-side {
+/* Left Side Image */
+.story-visuals {
   position: relative;
-}
-
-.story-image-wrapper {
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
-  border: 1px solid rgba(201, 169, 110, 0.15);
-}
-
-.story-image {
-  width: 100%;
-  height: 650px;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-  transition: transform 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.story-image-wrapper:hover .story-image {
-  transform: scale(1.04);
-}
-
-.story-image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    to bottom,
-    transparent 60%,
-    rgba(250, 247, 242, 0.1) 100%
-  );
-  pointer-events: none;
 }
 
-/* Story Content Details */
-.story-text-side {
+.story-image-main {
+  width: 100%;
+  height: 100%;
+  min-height: 700px;
+  overflow: hidden;
+}
+
+.story-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Right Side Content */
+.story-content-wrapper {
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  padding: 80px;
+  background-color: var(--color-bg);
 }
 
-.story-text-content {
-  max-width: 480px;
+.story-text-card {
+  max-width: 500px;
 }
 
 .story-eyebrow {
   font-family: var(--font-body);
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.3em;
   color: var(--color-gold);
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -78,23 +60,23 @@
 
 .story-title {
   font-family: var(--font-heading);
-  font-size: clamp(34px, 4vw, 48px);
+  font-size: clamp(40px, 4.5vw, 56px);
   font-weight: 300;
-  line-height: 1.2;
+  line-height: 1.15;
   color: var(--color-dark);
-  margin-bottom: 25px;
+  margin-bottom: 30px;
 }
 
 .story-divider {
   width: 60px;
   height: 1px;
   background-color: var(--color-gold);
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 }
 
 .story-description {
   font-family: var(--font-body);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.8;
   color: var(--color-text);
@@ -102,44 +84,90 @@
 }
 
 .story-description p {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .story-description p:last-child {
   margin-bottom: 0;
 }
 
+/* Minimalist Milestones */
+.story-milestones-minimal {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  font-family: var(--font-body);
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-text-light);
+}
+
+.story-milestones-minimal .dot {
+  color: var(--color-gold);
+}
+
 .story-cta {
-  transition: var(--transition-fast);
+  padding: 14px 40px;
 }
 
 /* Mobile responsive fixes */
+@media (max-width: 1199px) {
+  .story-content-wrapper {
+    padding: 60px;
+  }
+}
+
 @media (max-width: 991px) {
   .story-section {
-    padding: 80px 0;
+    padding: 0;
   }
 
   .story-container {
     grid-template-columns: 1fr;
-    gap: 50px;
-    padding: 0 30px;
   }
 
-  .story-image {
-    height: 450px;
+  .story-image-main {
+    min-height: 500px;
+    height: 500px;
   }
 
-  .story-text-side {
-    align-items: center;
+  .story-content-wrapper {
+    padding: 80px 40px;
     text-align: center;
   }
 
-  .story-text-content {
+  .story-text-card {
     max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .story-divider {
-    margin: 0 auto 30px;
+  .story-milestones-minimal {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 575px) {
+  .story-image-main {
+    min-height: 400px;
+    height: 400px;
+  }
+
+  .story-content-wrapper {
+    padding: 60px 20px;
+  }
+
+  .story-milestones-minimal {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .story-milestones-minimal .dot {
+    display: none;
   }
 }
 
