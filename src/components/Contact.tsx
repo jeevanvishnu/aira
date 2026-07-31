@@ -31,14 +31,14 @@ const Contact: React.FC = () => {
           <h2 className="contact-title">Get in Touch</h2>
           <div className="contact-info-divider"></div>
           <p className="contact-subtitle">
-            We invite you to reach out for bespoke inquiries, private boutique appointments, or assistance with our collections.
+            We invite you to reach out for bespoke inquiries, private store appointments, or assistance with our collections.
           </p>
           
           <div className="contact-details">
             <div className="contact-detail-item">
               <MapPin className="contact-icon" size={20} strokeWidth={1.5} />
               <div>
-                <h4>Visit Our Boutique</h4>
+                <h4>Visit Our Store</h4>
                 <p>8th Street, Al Ghuwair<br/>Near Rolla Square Park<br/>Rolla - 97629, Sharjah - UAE</p>
               </div>
             </div>
@@ -62,7 +62,7 @@ const Contact: React.FC = () => {
             <div className="contact-detail-item">
               <Clock className="contact-icon" size={20} strokeWidth={1.5} />
               <div>
-                <h4>Boutique Hours</h4>
+                <h4>Store Hours</h4>
                 <p>Monday - Sunday: 10am - 10pm</p>
               </div>
             </div>

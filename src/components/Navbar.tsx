@@ -116,7 +116,7 @@ export default function Navbar() {
             <div className="social-links-wrapper">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" onClick={closeMenus}>Instagram</a>
               <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" onClick={closeMenus}>Facebook</a>
-              <a href="tel:+919999999999" onClick={closeMenus}>Call Showroom</a>
+              <a href="tel:+919999999999" onClick={closeMenus}>Call Store</a>
             </div>
           </div>
         </div>

@@ -43,7 +43,7 @@ const Footer: React.FC = () => {
 
         {/* Column 3: Contact */}
         <div className="footer-col-contact">
-          <h4 className="footer-title">Boutique Location</h4>
+          <h4 className="footer-title">Store Location</h4>
           <div className="contact-address">
             <p>8th Street, Al Ghuwair</p>
             <p>Near Rolla Square Park</p>
