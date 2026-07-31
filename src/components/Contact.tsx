@@ -63,7 +63,7 @@ const Contact: React.FC = () => {
               <Clock className="contact-icon" size={20} strokeWidth={1.5} />
               <div>
                 <h4>Store Hours</h4>
-                <p>Monday - Sunday: 10am - 10pm</p>
+                <p>Monday - Sunday: 10AM - 10PM</p>
               </div>
             </div>
           </div>

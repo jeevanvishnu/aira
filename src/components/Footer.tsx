@@ -66,7 +66,12 @@ const Footer: React.FC = () => {
 
       {/* Bottom Bar */}
       <div className="footer-classic-bottom">
-        <p>&copy; {new Date().getFullYear()} Aira Jewels. All rights reserved.</p>
+        <p>
+          &copy; {new Date().getFullYear()} Aira Jewels. All Rights Reserved |{' '}
+          <a href="https://www.mostech.ae/" target="_blank" rel="noopener noreferrer" className="footer-developer-link">
+            Developed by Mostech Business Solutions
+          </a>
+        </p>
         <div className="footer-bottom-links">
           <button className="footer-scroll-top-btn" onClick={scrollToTop} aria-label="Scroll to top">
             Back to Top ↑
