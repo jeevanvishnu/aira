@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './HeroScroll.css';
-import image1 from '../assets/Firefly_Gemini Flash.png';
-import image2 from '../assets/Firefly_Gemini Flash__ An elegant flat-lay composition on a pristine white marble surface- _a delicate go 888705.png';
-import image3 from '../assets/Firefly_Gemini Flash_ radiant Indian bride adorned in a full traditional bridal jewellery set — _heavy gol 854521.png';
+import image1 from '../assets/Firefly_Gemini Flash.webp';
+import image2 from '../assets/Firefly_Gemini Flash__ An elegant flat-lay composition on a pristine white marble surface- _a delicate go 888705.webp';
+import image3 from '../assets/Firefly_Gemini Flash_ radiant Indian bride adorned in a full traditional bridal jewellery set — _heavy gol 854521.webp';
 
 const slides = [
   {
@@ -46,7 +46,13 @@ const HeroScroll: React.FC = () => {
           className={`hero-slide ${index === current ? 'hero-slide--active' : ''}`}
         >
           <div className="hero-background-container">
-            <img src={slide.image} alt={slide.title} className="hero-background-image" />
+            <img
+              src={slide.image}
+              alt={slide.title}
+              className="hero-background-image"
+              loading={index === 0 ? 'eager' : 'lazy'}
+              fetchPriority={index === 0 ? 'high' : 'low'}
+            />
             <div className="hero-gradient-overlay"></div>
           </div>
           

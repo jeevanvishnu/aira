@@ -1,10 +1,10 @@
 import React from 'react';
 import './TrendingNow.css';
 
-import auspiciousImg from '../assets/trending-auspicious.png';
-import giftingImg from '../assets/trending-gifting.png';
-import origamiImg from '../assets/trending-origami-v2.png';
-import everydayImg from '../assets/trending-everyday.png';
+import auspiciousImg from '../assets/trending-auspicious.webp';
+import giftingImg from '../assets/trending-gifting.webp';
+import origamiImg from '../assets/trending-origami-v2.webp';
+import everydayImg from '../assets/trending-everyday.webp';
 import ScrollReveal from './ScrollReveal';
 
 interface Category {
@@ -59,7 +59,7 @@ const TrendingNow: React.FC = () => {
           {trendingCategories.map((category) => (
             <div key={category.id} className="category-card">
               <div className="category-image-container">
-                <img src={category.image} alt={category.name} className="category-image" />
+                <img src={category.image} alt={category.name} className="category-image" loading="lazy" />
                 <div className="category-overlay"></div>
               </div>
               <div className="category-info">

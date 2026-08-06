@@ -1,8 +1,8 @@
 import React from 'react';
 import './BridalCollection.css';
-import bridalMain from '../assets/bridal-main.png';
-import bridalNecklace from '../assets/bridal-necklace.png';
-import bridalRings from '../assets/bridal-rings.png';
+import bridalMain from '../assets/bridal-main.webp';
+import bridalNecklace from '../assets/bridal-necklace.webp';
+import bridalRings from '../assets/bridal-rings.webp';
 import ScrollReveal from './ScrollReveal';
 
 const BridalCollection: React.FC = () => {
@@ -32,7 +32,8 @@ const BridalCollection: React.FC = () => {
             <img 
               src={bridalMain} 
               alt="Bridal Jewelry Collection" 
-              className="bridal-img" 
+              className="bridal-img"
+              loading="lazy"
             />
             <div className="bridal-overlay"></div>
           </div>
@@ -43,7 +44,8 @@ const BridalCollection: React.FC = () => {
               <img 
                 src={bridalNecklace} 
                 alt="Bridal Necklace Close-up" 
-                className="bridal-img" 
+                className="bridal-img"
+                loading="lazy"
               />
               <div className="bridal-overlay"></div>
             </div>
@@ -51,7 +53,8 @@ const BridalCollection: React.FC = () => {
               <img 
                 src={bridalRings} 
                 alt="Bridal Rings Close-up" 
-                className="bridal-img" 
+                className="bridal-img"
+                loading="lazy"
               />
               <div className="bridal-overlay"></div>
             </div>

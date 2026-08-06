@@ -1,30 +1,85 @@
 .story-section {
-  padding: 120px 0;
-  background-color: var(--color-bg);
+  padding: 100px 20px;
+  background-color: #fafafa;
   overflow: hidden;
 }
 
 .story-container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: stretch;
+  align-items: center;
+  gap: 80px;
 }
 
-/* Left Side Image */
+/* Left Side Content */
+.story-content-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.story-text-card {
+  max-width: 500px;
+}
+
+.story-title {
+  font-family: var(--font-heading, "Playfair Display", serif);
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.story-description {
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.story-description p {
+  margin-bottom: 20px;
+}
+
+.story-description p:last-child {
+  margin-bottom: 0;
+}
+
+.story-cta-link {
+  display: inline-block;
+  font-family: var(--font-body, "Inter", sans-serif);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: 1px solid #d4af37; /* Gold underline */
+  padding-bottom: 5px;
+  transition: all 0.3s ease;
+}
+
+.story-cta-link:hover {
+  color: #d4af37;
+  border-bottom-color: #1a1a1a;
+}
+
+/* Right Side Image */
 .story-visuals {
   position: relative;
   width: 100%;
-  height: 100%;
 }
 
 .story-image-main {
   width: 100%;
-  height: 100%;
-  min-height: 700px;
+  aspect-ratio: 4 / 5;
   overflow: hidden;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08); /* Optional subtle shadow */
 }
 
 .story-img {
@@ -32,110 +87,28 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  transition: transform 0.5s ease;
 }
 
-/* Right Side Content */
-.story-content-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 80px;
-  background-color: var(--color-bg);
+.story-image-main:hover .story-img {
+  transform: scale(1.03);
 }
 
-.story-text-card {
-  max-width: 500px;
-}
-
-.story-eyebrow {
-  font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.3em;
-  color: var(--color-gold);
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  display: block;
-}
-
-.story-title {
-  font-family: var(--font-heading);
-  font-size: clamp(40px, 4.5vw, 56px);
-  font-weight: 300;
-  line-height: 1.15;
-  color: var(--color-dark);
-  margin-bottom: 30px;
-}
-
-.story-divider {
-  width: 60px;
-  height: 1px;
-  background-color: var(--color-gold);
-  margin-bottom: 40px;
-}
-
-.story-description {
-  font-family: var(--font-body);
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.8;
-  color: var(--color-text);
-  margin-bottom: 40px;
-}
-
-.story-description p {
-  margin-bottom: 25px;
-}
-
-.story-description p:last-child {
-  margin-bottom: 0;
-}
-
-/* Minimalist Milestones */
-.story-milestones-minimal {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 40px;
-  font-family: var(--font-body);
-  font-size: 13px;
-  text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--color-text-light);
-}
-
-.story-milestones-minimal .dot {
-  color: var(--color-gold);
-}
-
-.story-cta {
-  padding: 14px 40px;
-}
-
-/* Mobile responsive fixes */
-@media (max-width: 1199px) {
-  .story-content-wrapper {
-    padding: 60px;
-  }
-}
-
+/* Responsive */
 @media (max-width: 991px) {
   .story-section {
-    padding: 0;
+    padding: 80px 20px;
   }
 
   .story-container {
     grid-template-columns: 1fr;
-  }
-
-  .story-image-main {
-    min-height: 500px;
-    height: 500px;
+    gap: 50px;
   }
 
   .story-content-wrapper {
-    padding: 80px 40px;
+    justify-content: center;
     text-align: center;
+    order: 2; /* Move text below image on mobile, or keep above? Usually text above is better, so let's keep order: 1 */
   }
 
   .story-text-card {
@@ -146,28 +119,18 @@
     align-items: center;
   }
 
-  .story-milestones-minimal {
-    justify-content: center;
+  .story-image-main {
+    max-width: 600px;
+    margin: 0 auto;
   }
 }
 
 @media (max-width: 575px) {
-  .story-image-main {
-    min-height: 400px;
-    height: 400px;
-  }
-
-  .story-content-wrapper {
+  .story-section {
     padding: 60px 20px;
   }
-
-  .story-milestones-minimal {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .story-milestones-minimal .dot {
-    display: none;
+  
+  .story-title {
+    font-size: 2.5rem;
   }
 }
-

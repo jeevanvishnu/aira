@@ -1,0 +1,199 @@
+.bc-section {
+  padding: 6rem 0;
+  background-color: var(--secondary-color, #fcf9f2); /* Matches premium soft background */
+  overflow: hidden;
+}
+
+.bc-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 5%;
+}
+
+.bc-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.bc-eyebrow {
+  display: block;
+  font-size: 0.85rem;
+  letter-spacing: 3px;
+  color: var(--primary-color, #d4af37);
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.bc-title {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-family: var(--font-heading, 'Playfair Display', serif);
+  color: var(--text-dark, #1a1a1a);
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+}
+
+.bc-divider {
+  width: 60px;
+  height: 2px;
+  background-color: var(--primary-color, #d4af37);
+  margin: 0 auto 1.5rem;
+}
+
+.bc-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-muted, #555);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.bc-carousel-wrapper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.bc-carousel-wrapper::before,
+.bc-carousel-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 5vw;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.bc-carousel-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--secondary-color, #fcf9f2) 0%, transparent 100%);
+}
+
+.bc-carousel-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--secondary-color, #fcf9f2) 0%, transparent 100%);
+}
+
+.bc-carousel-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  /* 40s duration for a smooth, readable scroll */
+  animation: scrollCarousel 40s linear infinite;
+}
+
+.bc-carousel-track:hover {
+  animation-play-state: paused;
+}
+
+/* 
+ * The scroll distance is half the total track width since we duplicated the items.
+ * (Width of 12 items + gaps) = exactly half of 24 items.
+ */
+@keyframes scrollCarousel {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 1rem));
+  }
+}
+
+.bc-carousel-card {
+  width: 320px;
+  flex-shrink: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+  cursor: pointer;
+  background: #fff;
+}
+
+.bc-carousel-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.bc-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+
+.bc-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.bc-carousel-card:hover .bc-image {
+  transform: scale(1.08);
+}
+
+.bc-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 50%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.bc-carousel-card:hover .bc-overlay {
+  opacity: 1;
+}
+
+.bc-explore-text {
+  color: #fff;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transform: translateY(20px);
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
+}
+
+.bc-explore-text::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: width 0.3s ease 0.2s;
+}
+
+.bc-carousel-card:hover .bc-explore-text {
+  transform: translateY(0);
+}
+
+.bc-carousel-card:hover .bc-explore-text::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .bc-carousel-card {
+    width: 260px;
+  }
+  .bc-title {
+    font-size: 2.2rem;
+  }
+  .bc-carousel-wrapper::before,
+  .bc-carousel-wrapper::after {
+    width: 5vw;
+  }
+}

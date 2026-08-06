@@ -1,0 +1,205 @@
+/* ===== Earring Gallery Section ===== */
+.eg-section {
+  background-color: #ffffff;
+  padding: 110px 0 130px;
+  width: 100%;
+  position: relative;
+}
+
+.eg-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, var(--color-gold) 50%, transparent 100%);
+}
+
+.eg-container {
+  padding: 0 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ===== Header ===== */
+.eg-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.eg-eyebrow {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  display: block;
+}
+
+.eg-title {
+  font-family: var(--font-heading);
+  font-size: clamp(34px, 3.8vw, 52px);
+  font-weight: 300;
+  color: var(--color-dark, #111111);
+  font-style: italic;
+  line-height: 1.15;
+}
+
+.eg-divider {
+  width: 50px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  margin: 24px auto;
+}
+
+.eg-subtitle {
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.5);
+  max-width: 460px;
+  margin: 0 auto;
+  letter-spacing: 0.04em;
+  line-height: 1.7;
+}
+
+/* ===== Grid ===== */
+.eg-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+}
+
+/* ===== Card ===== */
+.eg-card {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  cursor: pointer;
+}
+
+.eg-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid rgba(197, 160, 89, 0.15);
+  background: #fbfbfb;
+  transition: border-color 0.6s ease, box-shadow 0.6s ease, border-radius 0.6s ease;
+  border-radius: 4px;
+}
+
+.eg-card:hover .eg-image-wrapper {
+  border-color: rgba(197, 160, 89, 0.55);
+  box-shadow: 0 10px 40px rgba(197, 160, 89, 0.12);
+  border-radius: 12px;
+}
+
+.eg-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.eg-card:hover .eg-image {
+  transform: scale(1.06);
+}
+
+/* Hover overlay */
+.eg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.25);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 35px;
+  transition: opacity 0.5s ease;
+}
+
+.eg-card:hover .eg-overlay {
+  opacity: 1;
+}
+
+/* Inquire button */
+.eg-btn {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 14px 32px;
+  background: rgba(255, 255, 255, 0.15);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  transform: translateY(14px);
+  opacity: 0;
+  display: inline-block;
+  border-radius: 2px;
+}
+
+.eg-card:hover .eg-btn {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+.eg-btn:hover {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-dark);
+}
+
+/* ===== Details ===== */
+.eg-details {
+  text-align: center;
+}
+
+.eg-name {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--color-dark, #111111);
+  margin-bottom: 6px;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  transition: color 0.3s ease;
+}
+
+.eg-card:hover .eg-name {
+  color: var(--color-gold, #c5a059);
+}
+
+.eg-material {
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.55);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 767px) {
+  .eg-section {
+    padding: 80px 0 100px;
+  }
+
+  .eg-container {
+    padding: 0 20px;
+  }
+
+  .eg-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+}

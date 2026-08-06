@@ -55,7 +55,7 @@
   font-family: var(--font-body);
   font-size: 15px;
   font-weight: 300;
-  color: rgba(255,255,255,0.5);
+  color: rgba(255, 255, 255, 0.5);
   max-width: 480px;
   margin: 0 auto;
   letter-spacing: 0.03em;
@@ -114,6 +114,7 @@
 .collections-grid:has(.collection-card:hover) .collection-card {
   flex: 0.6;
 }
+
 .collections-grid .collection-card:hover {
   flex: 2.2;
 }
@@ -121,21 +122,17 @@
 .collection-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    transparent 40%,
-    rgba(0, 0, 0, 0.9) 100%
-  );
+  background: linear-gradient(to bottom,
+      transparent 40%,
+      rgba(0, 0, 0, 0.9) 100%);
   z-index: 2;
   transition: background 0.6s ease;
 }
 
 .collection-card:hover .collection-overlay {
-  background: linear-gradient(
-    to bottom,
-    transparent 20%,
-    rgba(0, 0, 0, 0.95) 100%
-  );
+  background: linear-gradient(to bottom,
+      transparent 20%,
+      rgba(0, 0, 0, 0.95) 100%);
 }
 
 /* Gold side-line accent (replaces old frame) */
@@ -236,6 +233,304 @@
   width: 50px;
 }
 
+/* — Rings Showcase Grid — */
+.rings-showcase-section {
+  background-color: #ffffff;
+  padding: 100px 0 120px;
+  width: 100%;
+}
+
+.rings-showcase-container {
+  padding: 0 40px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.rings-showcase-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.rings-eyebrow {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.rings-title {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 3.5vw, 48px);
+  font-weight: 300;
+  color: var(--color-dark, #111111);
+  font-style: italic;
+}
+
+.rings-header-divider {
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  margin: 20px auto 0;
+}
+
+.rings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.ring-card-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.ring-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid rgba(197, 160, 89, 0.15);
+  background: #fcfcfc;
+  transition: border-color 0.6s ease;
+}
+
+.ring-card-item:hover .ring-image-wrapper {
+  border-color: rgba(197, 160, 89, 0.6);
+}
+
+.ring-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.ring-card-item:hover .ring-image {
+  transform: scale(1.05);
+}
+
+.ring-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.4);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 30px;
+  transition: opacity 0.5s ease;
+}
+
+.ring-card-item:hover .ring-card-overlay {
+  opacity: 1;
+}
+
+.ring-inquire-btn {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  transform: translateY(15px);
+  opacity: 0;
+}
+
+.ring-card-item:hover .ring-inquire-btn {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+.ring-inquire-btn:hover {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-dark);
+}
+
+.ring-details {
+  text-align: center;
+}
+
+.ring-name {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 300;
+  color: var(--color-dark, #111111);
+  margin-bottom: 6px;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+.ring-subtext {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.05em;
+}
+
+/* — Necklaces Showcase Grid — */
+.necklaces-showcase-section {
+  background-color: #0d0d0d;
+  padding: 100px 0 120px;
+  width: 100%;
+}
+
+.necklaces-showcase-container {
+  padding: 0 40px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.necklaces-showcase-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.necklaces-eyebrow {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  color: var(--color-gold);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  display: block;
+}
+
+.necklaces-title {
+  font-family: var(--font-heading);
+  font-size: clamp(32px, 3.5vw, 48px);
+  font-weight: 300;
+  color: #ffffff;
+  font-style: italic;
+}
+
+.necklaces-header-divider {
+  width: 40px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--color-gold), transparent);
+  margin: 20px auto 0;
+}
+
+.necklaces-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.necklace-card-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.necklace-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid rgba(197, 160, 89, 0.15);
+  background: #111111;
+  transition: border-color 0.6s ease;
+}
+
+.necklace-card-item:hover .necklace-image-wrapper {
+  border-color: rgba(197, 160, 89, 0.6);
+}
+
+.necklace-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.necklace-card-item:hover .necklace-image {
+  transform: scale(1.05);
+}
+
+.necklace-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.5);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 30px;
+  transition: opacity 0.5s ease;
+}
+
+.necklace-card-item:hover .necklace-card-overlay {
+  opacity: 1;
+}
+
+.necklace-inquire-btn {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.08);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  transform: translateY(15px);
+  opacity: 0;
+}
+
+.necklace-card-item:hover .necklace-inquire-btn {
+  transform: translateY(0);
+  opacity: 1;
+  transition-delay: 0.1s;
+}
+
+.necklace-inquire-btn:hover {
+  background: var(--color-gold);
+  border-color: var(--color-gold);
+  color: var(--color-dark);
+}
+
+.necklace-details {
+  text-align: center;
+}
+
+.necklace-name {
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: 300;
+  color: #ffffff;
+  margin-bottom: 6px;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+
+.necklace-subtext {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 0.05em;
+}
+
 /* Responsive — flex accordion collapses to grid */
 @media (max-width: 1199px) {
   .collections-grid {
@@ -248,18 +543,20 @@
     flex: none;
     height: 500px;
   }
-  
+
   .collections-grid:has(.collection-card:hover) .collection-card {
     flex: none;
   }
+
   .collections-grid .collection-card:hover {
     flex: none;
   }
-  
+
   .collection-content {
     text-align: center;
     align-items: center;
   }
+
   .collection-frame {
     left: auto;
     top: 0;
@@ -268,6 +565,7 @@
     background: linear-gradient(to right, transparent, var(--color-gold), transparent);
     transition: none;
   }
+
   .collection-card:hover .collection-frame {
     height: 3px;
   }
@@ -277,20 +575,33 @@
   .collections-section {
     padding: 80px 0 100px;
   }
-  
+
   .collections-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 3px;
   }
-  
+
+  .rings-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .rings-showcase-section {
+    padding: 80px 0;
+  }
+
+  .rings-showcase-container {
+    padding: 0 20px;
+  }
+
   .collection-card {
     height: 380px;
   }
-  
+
   .collection-card-inner {
     padding: 30px 24px;
   }
-  
+
   .collection-content {
     text-align: center;
     align-items: center;
@@ -305,6 +616,11 @@
   .collections-grid {
     grid-template-columns: 1fr;
     gap: 3px;
+  }
+
+  .rings-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .collection-card {

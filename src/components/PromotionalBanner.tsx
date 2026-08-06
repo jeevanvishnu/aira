@@ -1,6 +1,6 @@
 import React from 'react';
 import './PromotionalBanner.css';
-import promoImage from '../assets/promotional_banner.png';
+import promoImage from '../assets/promotional_banner.webp';
 import ScrollReveal from './ScrollReveal';
 
 const PromotionalBanner: React.FC = () => {
