@@ -173,7 +173,7 @@
 }
 
 .ng-card:hover .ng-name {
-  color: var(--color-gold-light, #e8c97a);
+  color: var(--color-gold, #c5a059);
 }
 
 .ng-material {

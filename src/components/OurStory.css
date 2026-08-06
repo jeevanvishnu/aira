@@ -34,11 +34,11 @@
 }
 
 .story-description {
-  font-family: var(--font-body, "Inter", sans-serif);
-  font-size: 0.95rem;
-  font-weight: 400;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 300;
   line-height: 1.8;
-  color: #666;
+  color: #777;
   margin-bottom: 40px;
 }
 

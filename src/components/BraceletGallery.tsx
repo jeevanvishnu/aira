@@ -12,6 +12,10 @@ const braceletCollection = [
   { id: 2, name: 'Classic Tennis Bracelet', material: '18k Yellow Gold & Diamonds', image: bracelet2 },
   { id: 3, name: 'Sapphire Halo Bracelet', material: 'Platinum & Blue Sapphire', image: bracelet3 },
   { id: 4, name: 'Interlocking Chain Link', material: 'Rose Gold & Mixed Metals', image: bracelet4 },
+  { id: 5, name: 'Eternity Diamond Bangle', material: '18k White Gold & Diamonds', image: bracelet1 },
+  { id: 6, name: 'Classic Tennis Bracelet', material: '18k Yellow Gold & Diamonds', image: bracelet2 },
+  { id: 7, name: 'Sapphire Halo Bracelet', material: 'Platinum & Blue Sapphire', image: bracelet3 },
+  { id: 8, name: 'Interlocking Chain Link', material: 'Rose Gold & Mixed Metals', image: bracelet4 },
 ];
 
 const BraceletGallery: React.FC = () => {
