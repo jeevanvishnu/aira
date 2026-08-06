@@ -2,9 +2,9 @@ import React from 'react';
 import './BraceletGallery.css';
 import ScrollReveal from './ScrollReveal';
 
-import bracelet1 from '../assetss/bracelets/ChatGPT Image Aug 6, 2026, 01_59_28 PM.png';
-import bracelet2 from '../assetss/bracelets/ChatGPT Image Aug 6, 2026, 01_59_55 PM.png';
-import bracelet3 from '../assetss/bracelets/ChatGPT Image Aug 6, 2026, 02_01_32 PM.png';
+import bracelet1 from '../assetss/bracelets/bracelets_1.png';
+import bracelet2 from '../assetss/bracelets/bracelets_2.png';
+import bracelet3 from '../assetss/bracelets/bracelets_3.png';
 import bracelet4 from '../assetss/bracelets/bracelet.png';
 
 const braceletCollection = [

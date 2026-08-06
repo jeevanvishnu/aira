@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './HeroScroll.css';
-import image1 from '../assetss/hero/ChatGPT Image Aug 6, 2026, 04_10_32 PM.png';
-import image2 from '../assetss/hero/ChatGPT Image Aug 6, 2026, 04_16_36 PM.png';
-import image3 from '../assetss/hero/ChatGPT Image Aug 6, 2026, 04_16_47 PM.png';
+import image1 from '../assetss/hero/hero_1.png';
+import image2 from '../assetss/hero/hero_2.png';
+import image3 from '../assetss/hero/hero_3.png';
 
 const slides = [
   {

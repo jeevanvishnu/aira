@@ -2,8 +2,8 @@ import React from 'react';
 import './EarringGallery.css';
 import ScrollReveal from './ScrollReveal';
 
-import earring1 from '../assetss/earrings/WhatsApp Image 2026-08-06 at 11.44.50 AM.jpeg';
-import earring2 from '../assetss/earrings/WhatsApp Image 2026-08-06 at 11.45.58 AM.jpeg';
+import earring1 from '../assetss/earrings/earrings_1.jpeg';
+import earring2 from '../assetss/earrings/earrings_2.jpeg';
 
 const earringCollection = [
   { id: 1, name: 'Luminous Pearl Drops', material: '18k Gold & Freshwater Pearl', image: earring1 },

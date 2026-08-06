@@ -164,11 +164,10 @@
 
 .ng-name {
   font-family: var(--font-heading);
-  font-size: 19px;
-  font-weight: 300;
+  font-size: 22px;
+  font-weight: 500;
   color: var(--color-dark, #111111);
   margin-bottom: 5px;
-  font-style: italic;
   letter-spacing: 0.02em;
   transition: color 0.3s ease;
 }

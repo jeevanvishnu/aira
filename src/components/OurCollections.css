@@ -328,11 +328,10 @@
 
 .ring-name {
   font-family: var(--font-heading);
-  font-size: 20px;
-  font-weight: 300;
+  font-size: 22px;
+  font-weight: 500;
   color: var(--color-dark, #111111);
   margin-bottom: 6px;
-  font-style: italic;
   letter-spacing: 0.02em;
 }
 
@@ -477,11 +476,10 @@
 
 .necklace-name {
   font-family: var(--font-heading);
-  font-size: 20px;
-  font-weight: 300;
+  font-size: 22px;
+  font-weight: 500;
   color: #ffffff;
   margin-bottom: 6px;
-  font-style: italic;
   letter-spacing: 0.02em;
 }
 

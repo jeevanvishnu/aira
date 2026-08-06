@@ -2,15 +2,15 @@ import React from 'react';
 import './NecklaceGallery.css';
 import ScrollReveal from './ScrollReveal';
 
-import necklace1 from '../assetss/necklaces/WhatsApp Image 2026-08-06 at 11.25.26 AM.jpeg';
-import necklace2 from '../assetss/necklaces/WhatsApp Image 2026-08-06 at 11.27.18 AM.jpeg';
-import necklace3 from '../assetss/necklaces/WhatsApp Image 2026-08-06 at 11.29.02 AM.jpeg';
-import necklace4 from '../assetss/necklaces/WhatsApp Image 2026-08-06 at 11.31.07 AM.jpeg';
-import necklace5 from '../assetss/necklaces/WhatsApp Image 2026-08-06 at 11.34.56 AM.jpeg';
-import necklace6 from '../assetss/necklaces/WhatsApp Image 2026-08-06 at 11.37.54 AM.jpeg';
-import necklace7 from '../assetss/necklaces/WhatsApp Image 2026-08-06 at 11.39.18 AM.jpeg';
-import necklace8 from '../assetss/necklaces/WhatsApp Image 2026-08-06 at 11.40.34 AM.jpeg';
-import necklace9 from '../assetss/necklaces/WhatsApp Image 2026-08-06 at 11.42.45 AM.jpeg';
+import necklace1 from '../assetss/necklaces/necklaces_1.jpeg';
+import necklace2 from '../assetss/necklaces/necklaces_2.jpeg';
+import necklace3 from '../assetss/necklaces/necklaces_3.jpeg';
+import necklace4 from '../assetss/necklaces/necklaces_4.jpeg';
+import necklace5 from '../assetss/necklaces/necklaces_5.jpeg';
+import necklace6 from '../assetss/necklaces/necklaces_6.jpeg';
+import necklace7 from '../assetss/necklaces/necklaces_7.jpeg';
+import necklace8 from '../assetss/necklaces/necklaces_8.jpeg';
+import necklace9 from '../assetss/necklaces/necklaces_9.jpeg';
 
 const necklaceCollection = [
   { id: 1, name: 'Sakura Bloom Bar Necklace', material: '18k Gold & Pink Sapphires', image: necklace1 },

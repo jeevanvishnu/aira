@@ -1,17 +1,17 @@
 import React from 'react';
 import './OurCollections.css';
-import ringsImg from '../assetss/rings.webp';
+import ringsImg from '../assetss/rings_1.png';
 import necklacesImg from '../assetss/necklaces.webp';
 import braceletsImg from '../assetss/bracelet.webp';
 import earringsImg from '../assetss/earring.webp';
 import ScrollReveal from './ScrollReveal';
 
-import ring1 from '../assetss/rings/ChatGPT Image Aug 6, 2026, 11_27_47 AM.webp';
-import ring2 from '../assetss/rings/ChatGPT Image Aug 6, 2026, 11_28_02 AM.webp';
-import ring3 from '../assetss/rings/ChatGPT Image Aug 6, 2026, 11_28_08 AM.webp';
-import ring4 from '../assetss/rings/ChatGPT Image Aug 6, 2026, 11_28_15 AM.webp';
-import ring5 from '../assetss/rings/ChatGPT Image Aug 6, 2026, 11_28_21 AM.webp';
-import ring6 from '../assetss/rings/ChatGPT Image Aug 6, 2026, 11_28_28 AM.webp';
+import ring1 from '../assetss/rings/rings.webp';
+import ring2 from '../assetss/rings/rings_2.webp';
+import ring3 from '../assetss/rings/rings_3.webp';
+import ring4 from '../assetss/rings/rings_4.webp';
+import ring5 from '../assetss/rings/rings_5.webp';
+import ring6 from '../assetss/rings/rings_6.webp';
 
 
 const collections = [
