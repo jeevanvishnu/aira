@@ -26,7 +26,7 @@ const necklaceCollection = [
 
 const NecklaceGallery: React.FC = () => {
   return (
-    <section className="ng-section">
+    <section id="necklaces" className="ng-section">
       <div className="ng-container">
         <ScrollReveal direction="up" className="ng-header">
           <span className="ng-eyebrow">THE NECKLACE GALLERY</span>

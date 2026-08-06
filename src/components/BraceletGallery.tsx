@@ -16,7 +16,7 @@ const braceletCollection = [
 
 const BraceletGallery: React.FC = () => {
   return (
-    <section className="bg-section">
+    <section id="bracelets" className="bg-section">
       <div className="bg-container">
         <ScrollReveal direction="up" className="bg-header">
           <span className="bg-eyebrow">THE BRACELET GALLERY</span>

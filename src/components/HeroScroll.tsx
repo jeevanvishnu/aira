@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './HeroScroll.css';
-import image1 from '../assets/Firefly_Gemini Flash.webp';
-import image2 from '../assets/Firefly_Gemini Flash__ An elegant flat-lay composition on a pristine white marble surface- _a delicate go 888705.webp';
-import image3 from '../assets/Firefly_Gemini Flash_ radiant Indian bride adorned in a full traditional bridal jewellery set — _heavy gol 854521.webp';
+import image1 from '../assetss/hero/ChatGPT Image Aug 6, 2026, 04_10_32 PM.png';
+import image2 from '../assetss/hero/ChatGPT Image Aug 6, 2026, 04_16_36 PM.png';
+import image3 from '../assetss/hero/ChatGPT Image Aug 6, 2026, 04_16_47 PM.png';
 
 const slides = [
   {

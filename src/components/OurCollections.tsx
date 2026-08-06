@@ -15,10 +15,10 @@ import ring6 from '../assetss/rings/ChatGPT Image Aug 6, 2026, 11_28_28 AM.webp'
 
 
 const collections = [
-  { id: 'rings', title: 'Rings', subtitle: 'Eternity & Engagement', image: ringsImg },
-  { id: 'necklaces', title: 'Necklaces', subtitle: 'Statement & Pendants', image: necklacesImg },
-  { id: 'bracelets', title: 'Bracelets', subtitle: 'Bangles & Chains', image: braceletsImg },
-  { id: 'earrings', title: 'Earrings', subtitle: 'Studs & Drops', image: earringsImg },
+  { id: 'rings', num: '01', title: 'Rings', subtitle: 'Eternity & Engagement', image: ringsImg },
+  { id: 'necklaces', num: '02', title: 'Necklaces', subtitle: 'Statement & Pendants', image: necklacesImg },
+  { id: 'bracelets', num: '03', title: 'Bracelets', subtitle: 'Bangles & Chains', image: braceletsImg },
+  { id: 'earrings', num: '04', title: 'Earrings', subtitle: 'Studs & Drops', image: earringsImg },
 ];
 
 const ringCollection = [
@@ -35,35 +35,33 @@ const OurCollections: React.FC = () => {
   return (
     <>
       <section id="collections" className="collections-section">
-      <ScrollReveal direction="up" className="collections-header">
-        <span className="collections-eyebrow">OUR SELECTIONS</span>
-        <h2 className="collections-title">Discover The Collections</h2>
-        <div className="collections-header-divider"></div>
-      </ScrollReveal>
+        
+        <div className="collections-content-layer">
+          <ScrollReveal direction="up" className="collections-header">
+            <span className="collections-eyebrow">OUR SELECTIONS</span>
+            <h2 className="collections-title">Discover The Collections</h2>
+            <div className="collections-header-divider"></div>
+          </ScrollReveal>
 
-      <div className="collections-grid">
-        {collections.map((item) => (
-          <div key={item.id} className="collection-card">
-            <div className="collection-card-inner">
-              <img src={item.image} alt={item.title} className="collection-image" loading="lazy" />
-              <div className="collection-overlay"></div>
-              <div className="collection-frame"></div>
-              <div className="collection-content">
-                <h3 className="collection-name">{item.title}</h3>
-                <p className="collection-sub">{item.subtitle}</p>
-                <div className="collection-line"></div>
-                <span className="collection-explore">
-                  Explore Collection
-                </span>
-              </div>
-            </div>
+          <div className="collections-card-grid">
+            {collections.map((item) => (
+              <a href={`#${item.id}`} key={item.id} className="premium-card">
+                <div className="premium-card-image-wrapper">
+                  <img src={item.image} alt={item.title} className="premium-card-image" loading="lazy" />
+                  <div className="premium-card-overlay"></div>
+                </div>
+                <div className="premium-card-content">
+                  <h3 className="premium-card-title">{item.title}</h3>
+                  <div className="premium-card-divider"></div>
+                  <span className="premium-card-explore">Explore Collection <span className="arrow">→</span></span>
+                </div>
+              </a>
+            ))}
           </div>
-        ))}
-      </div>
+        </div>
+      </section>
 
-    </section>
-
-    <section className="rings-showcase-section">
+    <section id="rings" className="rings-showcase-section">
       <div className="rings-showcase-container">
         <ScrollReveal direction="up" className="rings-showcase-header">
           <span className="rings-eyebrow">THE RING GALLERY</span>

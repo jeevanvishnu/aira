@@ -1,6 +1,7 @@
 .bc-section {
   padding: 6rem 0;
-  background-color: var(--secondary-color, #fcf9f2); /* Matches premium soft background */
+  background-color: var(--secondary-color, #fcf9f2);
+  /* Matches premium soft background */
   overflow: hidden;
 }
 
@@ -58,26 +59,7 @@
   padding: 2rem 0;
 }
 
-.bc-carousel-wrapper::before,
-.bc-carousel-wrapper::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 5vw;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
-}
 
-.bc-carousel-wrapper::before {
-  left: 0;
-  background: linear-gradient(to right, var(--secondary-color, #fcf9f2) 0%, transparent 100%);
-}
-
-.bc-carousel-wrapper::after {
-  right: 0;
-  background: linear-gradient(to left, var(--secondary-color, #fcf9f2) 0%, transparent 100%);
-}
 
 .bc-carousel-track {
   display: flex;
@@ -99,6 +81,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(calc(-50% - 1rem));
   }
@@ -142,7 +125,7 @@
 .bc-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 50%);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 50%);
   opacity: 0;
   transition: opacity 0.4s ease;
   display: flex;
@@ -189,11 +172,10 @@
   .bc-carousel-card {
     width: 260px;
   }
+
   .bc-title {
     font-size: 2.2rem;
   }
-  .bc-carousel-wrapper::before,
-  .bc-carousel-wrapper::after {
-    width: 5vw;
-  }
+
+
 }

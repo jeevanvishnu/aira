@@ -9,7 +9,6 @@ import EarringGallery from './components/EarringGallery';
 import BabyCollection from './components/BabyCollection';
 import OurBrands from './components/OurBrands';
 import AiraPromise from './components/AiraPromise';
-import BridalCollection from './components/BridalCollection';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
@@ -25,7 +24,6 @@ const App = () => {
       <BraceletGallery />
       <EarringGallery />
       <BabyCollection />
-      <BridalCollection />
       <OurBrands />
       <AiraPromise />
       <Contact />

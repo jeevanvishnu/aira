@@ -12,7 +12,7 @@ const earringCollection = [
 
 const EarringGallery: React.FC = () => {
   return (
-    <section className="eg-section">
+    <section id="earrings" className="eg-section">
       <div className="eg-container">
         <ScrollReveal direction="up" className="eg-header">
           <span className="eg-eyebrow">THE EARRING GALLERY</span>

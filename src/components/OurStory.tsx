@@ -1,6 +1,6 @@
 import React from 'react';
 import './OurStory.css';
-import ourStoryImg from '../assetss/about/aira 002.jpg (1).webp';
+import ourStoryImg from '../assetss/about/ChatGPT Image Aug 6, 2026, 04_27_25 PM.png';
 import ScrollReveal from './ScrollReveal';
 
 const OurStory: React.FC = () => {
