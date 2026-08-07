@@ -104,7 +104,7 @@ export default function Navbar() {
             >
               <X size={28} strokeWidth={1.5} />
             </button>
-            <span className="mobile-menu-title">AIRA JEWELS</span>
+            <img src={Logo} alt="Aira Jewels Logo" width="90" className="mobile-menu-logo" />
           </div>
           
           <ul className="navbar-menu-mobile-list">

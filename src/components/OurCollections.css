@@ -504,12 +504,45 @@
 
 @media (max-width: 767px) {
   .collections-section {
-    padding: 80px 0;
+    padding: 60px 0;
   }
   
+  .collections-header {
+    margin-bottom: 40px;
+  }
+
+  .collections-title {
+    font-size: 32px;
+    line-height: 1.25;
+  }
+
   .collections-card-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+  }
+
+  .premium-card {
+    height: 380px;
+  }
+
+  .premium-card-content {
+    transform: translateY(0);
+    padding: 20px;
+  }
+
+  .premium-card-title {
+    font-size: 24px;
+    color: var(--color-gold);
+  }
+
+  .premium-card-divider {
+    width: 60px;
+    background: var(--color-gold);
+  }
+
+  .premium-card-explore {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .rings-grid {
@@ -518,20 +551,48 @@
   }
 
   .rings-showcase-section {
-    padding: 80px 0;
+    padding: 60px 0;
   }
 
   .rings-showcase-container {
     padding: 0 20px;
   }
+
+  .ring-card-overlay,
+  .necklace-card-overlay {
+    opacity: 1;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
+  }
+
+  .ring-inquire-btn,
+  .necklace-inquire-btn {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 480px) {
+  .collections-section {
+    padding: 50px 0;
+  }
+
+  .collections-header {
+    margin-bottom: 30px;
+  }
+
+  .collections-title {
+    font-size: 28px;
+  }
+
   .collections-card-grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 20px;
   }
   
+  .premium-card {
+    height: 420px;
+  }
+
   .rings-grid {
     grid-template-columns: 1fr;
     gap: 20px;

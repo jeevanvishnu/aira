@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { getProductById, getProductsByCategory, type ProductDetails } from '../data/products';
 import { ChevronDown, ChevronUp } from 'lucide-react';
+import { motion } from 'motion/react';
 import './ProductDetailsPage.css';
 
 const ProductDetailsPage: React.FC = () => {
@@ -14,6 +15,7 @@ const ProductDetailsPage: React.FC = () => {
   const [isZoomed, setIsZoomed] = useState(false);
   const [detailsOpen, setDetailsOpen] = useState(false);
   const [shippingOpen, setShippingOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     const { left, top, width, height } = e.currentTarget.getBoundingClientRect();
@@ -21,6 +23,13 @@ const ProductDetailsPage: React.FC = () => {
     const y = ((e.clientY - top) / height) * 100;
     setZoomPos({ x, y });
   };
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   useEffect(() => {
     // Scroll to top on navigation
@@ -55,7 +64,13 @@ const ProductDetailsPage: React.FC = () => {
   const whatsappMessage = encodeURIComponent(`Hello, I would like to inquire about the ${product.name} (${product.category}).\nMaterial: ${product.material}\nSelected Metal: ${getMetalName(selectedMetal)}\nI would like to know the price and availability.`);
 
   return (
-    <div className="pd-page">
+    <motion.div 
+      className="pd-page"
+      key={product.id}
+      initial={{ opacity: 0, y: 15 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94] }}
+    >
       <div className="pd-breadcrumb">
         <Link to="/">Home</Link> <span>/</span> 
         <Link to={`/#${product.category.toLowerCase()}`}>{product.category}</Link> <span>/</span> 
@@ -67,18 +82,18 @@ const ProductDetailsPage: React.FC = () => {
         <div className="pd-gallery">
           <div 
             className="pd-image-main"
-            onMouseMove={handleMouseMove}
-            onMouseEnter={() => setIsZoomed(true)}
-            onMouseLeave={() => setIsZoomed(false)}
-            style={{ cursor: 'zoom-in' }}
+            onMouseMove={!isMobile ? handleMouseMove : undefined}
+            onMouseEnter={!isMobile ? () => setIsZoomed(true) : undefined}
+            onMouseLeave={!isMobile ? () => setIsZoomed(false) : undefined}
+            style={{ cursor: isMobile ? 'default' : 'zoom-in' }}
           >
             <img 
               src={product.image} 
               alt={product.name} 
               style={{
                 transformOrigin: `${zoomPos.x}% ${zoomPos.y}%`,
-                transform: isZoomed ? 'scale(2.2)' : 'scale(1)',
-                transition: isZoomed ? 'none' : 'transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
+                transform: isZoomed && !isMobile ? 'scale(2.2)' : 'scale(1)',
+                transition: isZoomed && !isMobile ? 'none' : 'transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)'
               }}
             />
           </div>
@@ -198,7 +213,7 @@ const ProductDetailsPage: React.FC = () => {
           </div>
         </div>
       )}
-    </div>
+    </motion.div>
   );
 };
 
