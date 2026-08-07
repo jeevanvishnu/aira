@@ -35,7 +35,7 @@
 
 .story-description {
   font-family: "Inter", system-ui, -apple-system, sans-serif;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 300;
   line-height: 1.8;
   color: #444;
@@ -106,8 +106,8 @@
   }
 
   .story-content-wrapper {
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start;
+    text-align: left;
     order: 2; /* Move text below image on mobile, or keep above? Usually text above is better, so let's keep order: 1 */
   }
 
@@ -116,7 +116,7 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .story-image-main {
@@ -132,5 +132,10 @@
   
   .story-title {
     font-size: 2.5rem;
+  }
+
+  .story-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
   }
 }
