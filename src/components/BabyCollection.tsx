@@ -55,17 +55,19 @@ const BabyCollection: React.FC = () => {
           {/* Double the images for seamless infinite looping */}
           {[...babyImages, ...babyImages].map((item, index) => (
             <div key={`${item.id}-${index}`} className="bc-carousel-card">
-              <div className="bc-image-wrapper">
-                <img
-                  src={item.image}
-                  alt={item.name}
-                  className="bc-image"
-                  loading="lazy"
-                />
-                <div className="bc-overlay">
-                  <Link to={`/product/baby-${item.id}`} className="bc-explore-text" style={{textDecoration: 'none'}}>View Details</Link>
+              <Link to={`/product/baby-${item.id}`} style={{textDecoration: 'none', color: 'inherit'}}>
+                <div className="bc-image-wrapper">
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="bc-image"
+                    loading="lazy"
+                  />
+                  <div className="bc-overlay">
+                    <span className="bc-explore-text">View Details</span>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           ))}
         </div>

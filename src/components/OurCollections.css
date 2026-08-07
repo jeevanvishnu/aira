@@ -558,16 +558,19 @@
     padding: 0 20px;
   }
 
-  .ring-card-overlay,
-  .necklace-card-overlay {
-    opacity: 1;
-    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 50%);
-  }
-
   .ring-inquire-btn,
   .necklace-inquire-btn {
-    opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (hover: none) {
+  .ring-card-overlay,
+  .necklace-card-overlay,
+  .eg-overlay,
+  .bg-overlay,
+  .bc-overlay {
+    display: none !important;
   }
 }
 

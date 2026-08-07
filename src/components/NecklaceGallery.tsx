@@ -42,23 +42,24 @@ const NecklaceGallery: React.FC = () => {
               key={necklace.id}
               direction="up"
               delay={necklace.id * 0.07}
-              className="ng-card"
             >
-              <div className="ng-image-wrapper">
-                <img
-                  src={necklace.image}
-                  alt={necklace.name}
-                  className="ng-image"
-                  loading="lazy"
-                />
-                <div className="ng-overlay">
-                  <Link to={`/product/necklace-${necklace.id}`} className="ng-btn">View Details</Link>
+              <Link to={`/product/necklace-${necklace.id}`} className="ng-card" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className="ng-image-wrapper">
+                  <img
+                    src={necklace.image}
+                    alt={necklace.name}
+                    className="ng-image"
+                    loading="lazy"
+                  />
+                  <div className="ng-overlay">
+                    <span className="ng-btn">View Details</span>
+                  </div>
                 </div>
-              </div>
-              <div className="ng-details">
-                <h4 className="ng-name">{necklace.name}</h4>
-                <p className="ng-material">{necklace.material}</p>
-              </div>
+                <div className="ng-details">
+                  <h4 className="ng-name">{necklace.name}</h4>
+                  <p className="ng-material">{necklace.material}</p>
+                </div>
+              </Link>
             </ScrollReveal>
           ))}
         </div>

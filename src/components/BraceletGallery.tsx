@@ -36,23 +36,24 @@ const BraceletGallery: React.FC = () => {
               key={bracelet.id}
               direction="up"
               delay={bracelet.id * 0.1}
-              className="bg-card"
             >
-              <div className="bg-image-wrapper">
-                <img
-                  src={bracelet.image}
-                  alt={bracelet.name}
-                  className="bg-image"
-                  loading="lazy"
-                />
-                <div className="bg-overlay">
-                  <Link to={`/product/bracelet-${bracelet.id}`} className="bg-btn">View Details</Link>
+              <Link to={`/product/bracelet-${bracelet.id}`} className="bg-card" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className="bg-image-wrapper">
+                  <img
+                    src={bracelet.image}
+                    alt={bracelet.name}
+                    className="bg-image"
+                    loading="lazy"
+                  />
+                  <div className="bg-overlay">
+                    <span className="bg-btn">View Details</span>
+                  </div>
                 </div>
-              </div>
-              <div className="bg-details">
-                <h4 className="bg-name">{bracelet.name}</h4>
-                <p className="bg-material">{bracelet.material}</p>
-              </div>
+                <div className="bg-details">
+                  <h4 className="bg-name">{bracelet.name}</h4>
+                  <p className="bg-material">{bracelet.material}</p>
+                </div>
+              </Link>
             </ScrollReveal>
           ))}
         </div>
