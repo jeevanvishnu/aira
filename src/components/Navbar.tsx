@@ -58,7 +58,7 @@ export default function Navbar() {
         {/* Desktop Left Menu */}
         <ul className="navbar-menu navbar-menu--left navbar-menu--desktop">
           <li className="navbar-item">
-            <a href="/#home" className="navbar-link">Home</a>
+            <Link to="/" className="navbar-link">Home</Link>
           </li>
           <li className="navbar-item">
             <a href="/#about" className="navbar-link">Our Story</a>
@@ -108,7 +108,7 @@ export default function Navbar() {
           </div>
           
           <ul className="navbar-menu-mobile-list">
-            <li><a href="/#home" onClick={closeMenus}>Home</a></li>
+            <li><Link to="/" onClick={closeMenus}>Home</Link></li>
             <li><a href="/#about" onClick={closeMenus}>Our Story</a></li>
             <li><a href="/#collections" onClick={closeMenus}>Collections</a></li>
             <li><Link to="/contact" onClick={closeMenus}>Contact Us</Link></li>
