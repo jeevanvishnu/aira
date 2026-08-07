@@ -1,6 +1,6 @@
 import React from 'react';
 import './OurStory.css';
-import ourStoryImg from '../assetss/about/about.png';
+import ourStoryImg from '../assetss/about/about.webp';
 import ScrollReveal from './ScrollReveal';
 
 const OurStory: React.FC = () => {

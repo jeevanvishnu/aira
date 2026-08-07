@@ -75,9 +75,9 @@ const Footer: React.FC = () => {
       {/* Bottom Bar */}
       <div className="footer-classic-bottom">
         <p>
-          &copy; {new Date().getFullYear()} Aira Jewels. All Rights Reserved |{' '}
+          &copy; All Rights Reserved | Developed by{' '}
           <a href="https://www.mostech.ae/" target="_blank" rel="noopener noreferrer" className="footer-developer-link">
-            Developed by Mostech Business Solutions
+            Mostech Business Solutions
           </a>
         </p>
         <div className="footer-bottom-links">

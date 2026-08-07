@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './HeroScroll.css';
-import image1 from '../assetss/hero/hero_1.png';
-import image2 from '../assetss/hero/hero_2.png';
-import image3 from '../assetss/hero/hero_3.png';
+import image1 from '../assetss/hero/hero_1.webp';
+import image2 from '../assetss/hero/hero_2.webp';
+import image3 from '../assetss/hero/hero_3.webp';
 
 const slides = [
   {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './OurCollections.css';
-import ringsImg from '../assetss/rings_1.png';
+import ringsImg from '../assetss/rings_1.webp';
 import necklacesImg from '../assetss/necklaces.webp';
 import braceletsImg from '../assetss/bracelet.webp';
 import earringsImg from '../assetss/earring.webp';

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './ContactPage.css';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 import ScrollReveal from '../components/ScrollReveal';
-import HeroBg from '../assetss/hero/hero_1.png';
+import HeroBg from '../assetss/hero/hero_1.webp';
 
 const ContactPage: React.FC = () => {
   const [formData, setFormData] = useState({

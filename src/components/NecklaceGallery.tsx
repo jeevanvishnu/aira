@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 import './NecklaceGallery.css';
 import ScrollReveal from './ScrollReveal';
 
-import necklace1 from '../assetss/necklaces/necklaces_1.jpeg';
-import necklace2 from '../assetss/necklaces/necklaces_2.jpeg';
-import necklace3 from '../assetss/necklaces/necklaces_3.jpeg';
-import necklace4 from '../assetss/necklaces/necklaces_4.jpeg';
-import necklace5 from '../assetss/necklaces/necklaces_5.jpeg';
-import necklace6 from '../assetss/necklaces/necklaces_6.jpeg';
-import necklace7 from '../assetss/necklaces/necklaces_7.jpeg';
-import necklace8 from '../assetss/necklaces/necklaces_8.jpeg';
-import necklace9 from '../assetss/necklaces/necklaces_9.jpeg';
+import necklace1 from '../assetss/necklaces/necklaces_1.webp';
+import necklace2 from '../assetss/necklaces/necklaces_2.webp';
+import necklace3 from '../assetss/necklaces/necklaces_3.webp';
+import necklace4 from '../assetss/necklaces/necklaces_4.webp';
+import necklace5 from '../assetss/necklaces/necklaces_5.webp';
+import necklace6 from '../assetss/necklaces/necklaces_6.webp';
+import necklace7 from '../assetss/necklaces/necklaces_7.webp';
+import necklace8 from '../assetss/necklaces/necklaces_8.webp';
+import necklace9 from '../assetss/necklaces/necklaces_9.webp';
 
 const necklaceCollection = [
   { id: 1, name: 'Sakura Bloom Bar Necklace', material: '18k Gold & Pink Sapphires', image: necklace1 },

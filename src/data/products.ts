@@ -9,25 +9,25 @@ import ring5 from '../assetss/rings/rings_5.webp';
 import ring6 from '../assetss/rings/rings_6.webp';
 
 // Necklaces
-import necklace1 from '../assetss/necklaces/necklaces_1.jpeg';
-import necklace2 from '../assetss/necklaces/necklaces_2.jpeg';
-import necklace3 from '../assetss/necklaces/necklaces_3.jpeg';
-import necklace4 from '../assetss/necklaces/necklaces_4.jpeg';
-import necklace5 from '../assetss/necklaces/necklaces_5.jpeg';
-import necklace6 from '../assetss/necklaces/necklaces_6.jpeg';
-import necklace7 from '../assetss/necklaces/necklaces_7.jpeg';
-import necklace8 from '../assetss/necklaces/necklaces_8.jpeg';
-import necklace9 from '../assetss/necklaces/necklaces_9.jpeg';
+import necklace1 from '../assetss/necklaces/necklaces_1.webp';
+import necklace2 from '../assetss/necklaces/necklaces_2.webp';
+import necklace3 from '../assetss/necklaces/necklaces_3.webp';
+import necklace4 from '../assetss/necklaces/necklaces_4.webp';
+import necklace5 from '../assetss/necklaces/necklaces_5.webp';
+import necklace6 from '../assetss/necklaces/necklaces_6.webp';
+import necklace7 from '../assetss/necklaces/necklaces_7.webp';
+import necklace8 from '../assetss/necklaces/necklaces_8.webp';
+import necklace9 from '../assetss/necklaces/necklaces_9.webp';
 
 // Bracelets
-import bracelet1 from '../assetss/bracelets/bracelets_1.png';
-import bracelet2 from '../assetss/bracelets/bracelets_2.png';
-import bracelet3 from '../assetss/bracelets/bracelets_3.png';
-import bracelet4 from '../assetss/bracelets/bracelet.png';
+import bracelet1 from '../assetss/bracelets/bracelets_1.webp';
+import bracelet2 from '../assetss/bracelets/bracelets_2.webp';
+import bracelet3 from '../assetss/bracelets/bracelets_3.webp';
+import bracelet4 from '../assetss/bracelets/bracelet.webp';
 
 // Earrings
-import earring1 from '../assetss/earrings/earrings_1.jpeg';
-import earring2 from '../assetss/earrings/earrings_2.jpeg';
+import earring1 from '../assetss/earrings/earrings_1.webp';
+import earring2 from '../assetss/earrings/earrings_2.webp';
 
 // Baby Collection
 import baby1 from '../assetss/baby/AND00489.webp';

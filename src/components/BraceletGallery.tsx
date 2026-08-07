@@ -3,10 +3,10 @@ import { Link } from 'react-router-dom';
 import './BraceletGallery.css';
 import ScrollReveal from './ScrollReveal';
 
-import bracelet1 from '../assetss/bracelets/bracelets_1.png';
-import bracelet2 from '../assetss/bracelets/bracelets_2.png';
-import bracelet3 from '../assetss/bracelets/bracelets_3.png';
-import bracelet4 from '../assetss/bracelets/bracelet.png';
+import bracelet1 from '../assetss/bracelets/bracelets_1.webp';
+import bracelet2 from '../assetss/bracelets/bracelets_2.webp';
+import bracelet3 from '../assetss/bracelets/bracelets_3.webp';
+import bracelet4 from '../assetss/bracelets/bracelet.webp';
 
 const braceletCollection = [
   { id: 1, name: 'Eternity Diamond Bangle', material: '18k White Gold & Diamonds', image: bracelet1 },

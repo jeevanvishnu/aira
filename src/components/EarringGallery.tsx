@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import './EarringGallery.css';
 import ScrollReveal from './ScrollReveal';
 
-import earring1 from '../assetss/earrings/earrings_1.jpeg';
-import earring2 from '../assetss/earrings/earrings_2.jpeg';
+import earring1 from '../assetss/earrings/earrings_1.webp';
+import earring2 from '../assetss/earrings/earrings_2.webp';
 
 const earringCollection = [
   { id: 1, name: 'Luminous Pearl Drops', material: '18k Gold & Freshwater Pearl', image: earring1 },
