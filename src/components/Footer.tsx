@@ -42,8 +42,8 @@ const Footer: React.FC = () => {
           <h4 className="footer-title">Explore</h4>
           <nav>
             <Link to="/">Home</Link>
-            <a href="/#about">Our Story</a>
-            <a href="/#collections">Collections</a>
+            <Link to="/#about">Our Story</Link>
+            <Link to="/#collections">Collections</Link>
             <Link to="/contact">Contact Us</Link>
             <Link to="/policies">Policies</Link>
           </nav>
