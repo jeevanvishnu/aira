@@ -265,6 +265,7 @@
 
 .social-links-wrapper {
   display: flex;
+  flex-wrap: wrap;
   gap: 25px;
 }
 
