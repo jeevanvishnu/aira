@@ -108,8 +108,9 @@ const Contact: React.FC = () => {
                 value={formData.phone}
                 onChange={handleChange}
                 placeholder=" "
+                required
               />
-              <label htmlFor="phone">Phone Number (Optional)</label>
+              <label htmlFor="phone">Phone Number</label>
             </div>
             
             <div className="form-group">
