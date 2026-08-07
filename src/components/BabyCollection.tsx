@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import './BabyCollection.css';
 import ScrollReveal from './ScrollReveal';
 
@@ -45,9 +46,7 @@ const BabyCollection: React.FC = () => {
           <span className="bc-eyebrow">FOR THE LITTLE ONES</span>
           <h2 className="bc-title">Baby Collection</h2>
           <div className="bc-divider"></div>
-          <p className="bc-subtitle">
-            Cherish their earliest moments with delicate, safely-crafted jewelry designed especially for babies and toddlers.
-          </p>
+
         </ScrollReveal>
       </div>
 
@@ -64,7 +63,7 @@ const BabyCollection: React.FC = () => {
                   loading="lazy"
                 />
                 <div className="bc-overlay">
-                  <span className="bc-explore-text">View Details</span>
+                  <Link to={`/product/baby-${item.id}`} className="bc-explore-text" style={{textDecoration: 'none'}}>View Details</Link>
                 </div>
               </div>
             </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './NecklaceGallery.css';
 import ScrollReveal from './ScrollReveal';
 
@@ -32,9 +33,7 @@ const NecklaceGallery: React.FC = () => {
           <span className="ng-eyebrow">THE NECKLACE GALLERY</span>
           <h2 className="ng-title">Exquisite Signature Necklaces</h2>
           <div className="ng-divider"></div>
-          <p className="ng-subtitle">
-            Handcrafted with precision — from delicate pendants to bold statement pieces.
-          </p>
+
         </ScrollReveal>
 
         <div className="ng-grid">
@@ -53,7 +52,7 @@ const NecklaceGallery: React.FC = () => {
                   loading="lazy"
                 />
                 <div className="ng-overlay">
-                  <a href="#contact" className="ng-btn">Inquire Now</a>
+                  <Link to={`/product/necklace-${necklace.id}`} className="ng-btn">View Details</Link>
                 </div>
               </div>
               <div className="ng-details">

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './OurCollections.css';
 import ringsImg from '../assetss/rings_1.png';
 import necklacesImg from '../assetss/necklaces.webp';
@@ -75,7 +76,7 @@ const OurCollections: React.FC = () => {
               <div className="ring-image-wrapper">
                 <img src={ring.image} alt={ring.name} className="ring-image" loading="lazy" />
                 <div className="ring-card-overlay">
-                  <a href="#contact" className="ring-inquire-btn">Inquire Now</a>
+                  <Link to={`/product/ring-${ring.id}`} className="ring-inquire-btn">View Details</Link>
                 </div>
               </div>
               <div className="ring-details">

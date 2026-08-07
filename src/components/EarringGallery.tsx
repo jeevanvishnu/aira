@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './EarringGallery.css';
 import ScrollReveal from './ScrollReveal';
 
@@ -24,9 +25,7 @@ const EarringGallery: React.FC = () => {
           <span className="eg-eyebrow">THE EARRING GALLERY</span>
           <h2 className="eg-title">Statement Earrings</h2>
           <div className="eg-divider"></div>
-          <p className="eg-subtitle">
-            Frame your face with brilliance — explore our curated selection of stunning earrings.
-          </p>
+
         </ScrollReveal>
 
         <div className="eg-grid">
@@ -45,7 +44,7 @@ const EarringGallery: React.FC = () => {
                   loading="lazy"
                 />
                 <div className="eg-overlay">
-                  <a href="#contact" className="eg-btn">Inquire Now</a>
+                  <Link to={`/product/earring-${earring.id}`} className="eg-btn">View Details</Link>
                 </div>
               </div>
               <div className="eg-details">

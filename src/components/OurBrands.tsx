@@ -31,9 +31,7 @@ const OurBrands: React.FC = () => {
           <span className="brands-eyebrow">HOUSE OF AIRA</span>
           <h2 className="brands-title">Our Brands</h2>
           <div className="brands-header-divider"></div>
-          <p className="brands-intro">
-            Modern artistry and timeless elegance. Our sub-brands celebrate fine craftsmanship with designs that speak to your unique style.
-          </p>
+
         </ScrollReveal>
         
         <ScrollReveal direction="up" delay={0.2} className="brands-grid">

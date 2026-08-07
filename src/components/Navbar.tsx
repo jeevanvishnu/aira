@@ -82,7 +82,7 @@ export default function Navbar() {
 
         {/* Header Actions */}
         <div className="navbar-actions">
-          <a href="tel:+919999999999" className="navbar-action-btn navbar-action-btn--desktop" aria-label="Call Us">
+          <a href="tel:+971501847916" className="navbar-action-btn navbar-action-btn--desktop" aria-label="Call Us">
             <Phone size={18} strokeWidth={1.5} />
           </a>
           <button 
@@ -117,9 +117,11 @@ export default function Navbar() {
           <div className="navbar-social">
             <span className="social-title">CONNECT WITH US</span>
             <div className="social-links-wrapper">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" onClick={closeMenus}>Instagram</a>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" onClick={closeMenus}>Facebook</a>
-              <a href="tel:+919999999999" onClick={closeMenus}>Call Store</a>
+              <a href="https://www.instagram.com/airajewels.uae/" target="_blank" rel="noopener noreferrer" onClick={closeMenus}>Instagram</a>
+              <a href="https://www.facebook.com/profile.php?id=61577557102396" target="_blank" rel="noopener noreferrer" onClick={closeMenus}>Facebook</a>
+              <a href="https://www.tiktok.com/@airajewels?_t=ZN-8yQLIcJXMko&_r=1" target="_blank" rel="noopener noreferrer" onClick={closeMenus}>TikTok</a>
+              <a href="https://in.pinterest.com/airajewels916/" target="_blank" rel="noopener noreferrer" onClick={closeMenus}>Pinterest</a>
+              <a href="https://wa.me/971501847916" target="_blank" rel="noopener noreferrer" onClick={closeMenus}>WhatsApp</a>
             </div>
           </div>
         </div>

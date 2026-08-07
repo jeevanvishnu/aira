@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './BraceletGallery.css';
 import ScrollReveal from './ScrollReveal';
 
@@ -26,9 +27,7 @@ const BraceletGallery: React.FC = () => {
           <span className="bg-eyebrow">THE BRACELET GALLERY</span>
           <h2 className="bg-title">Elegant Wristwear</h2>
           <div className="bg-divider"></div>
-          <p className="bg-subtitle">
-            Refined elegance for your wrist — from classic tennis styles to statement bangles.
-          </p>
+
         </ScrollReveal>
 
         <div className="bg-grid">
@@ -47,7 +46,7 @@ const BraceletGallery: React.FC = () => {
                   loading="lazy"
                 />
                 <div className="bg-overlay">
-                  <a href="#contact" className="bg-btn">Inquire Now</a>
+                  <Link to={`/product/bracelet-${bracelet.id}`} className="bg-btn">View Details</Link>
                 </div>
               </div>
               <div className="bg-details">

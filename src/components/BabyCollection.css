@@ -107,7 +107,7 @@
 .bc-image-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 3/4;
+  aspect-ratio: 2/3;
   overflow: hidden;
 }
 
