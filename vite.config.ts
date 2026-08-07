@@ -26,7 +26,7 @@ export default defineConfig({
         },
       },
     },
+    // Inline assets smaller than 8KB as base64 to save HTTP requests
+    assetsInlineLimit: 8192,
   },
-  // Inline assets smaller than 8KB as base64 to save HTTP requests
-  assetsInlineLimit: 8192,
 })
