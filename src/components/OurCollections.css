@@ -564,15 +564,7 @@
   }
 }
 
-@media (hover: none) {
-  .ring-card-overlay,
-  .necklace-card-overlay,
-  .eg-overlay,
-  .bg-overlay,
-  .bc-overlay {
-    display: none !important;
-  }
-}
+
 
 @media (max-width: 480px) {
   .collections-section {

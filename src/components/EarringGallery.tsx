@@ -34,24 +34,23 @@ const EarringGallery: React.FC = () => {
               key={earring.id}
               direction="up"
               delay={earring.id * 0.15}
+              className="eg-card"
             >
-              <Link to={`/product/earring-${earring.id}`} className="eg-card" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <div className="eg-image-wrapper">
-                  <img
-                    src={earring.image}
-                    alt={earring.name}
-                    className="eg-image"
-                    loading="lazy"
-                  />
-                  <div className="eg-overlay">
-                    <span className="eg-btn">View Details</span>
-                  </div>
+              <div className="eg-image-wrapper">
+                <img
+                  src={earring.image}
+                  alt={earring.name}
+                  className="eg-image"
+                  loading="lazy"
+                />
+                <div className="eg-overlay">
+                  <Link to={`/product/earring-${earring.id}`} className="eg-btn">View Details</Link>
                 </div>
-                <div className="eg-details">
-                  <h4 className="eg-name">{earring.name}</h4>
-                  <p className="eg-material">{earring.material}</p>
-                </div>
-              </Link>
+              </div>
+              <div className="eg-details">
+                <h4 className="eg-name">{earring.name}</h4>
+                <p className="eg-material">{earring.material}</p>
+              </div>
             </ScrollReveal>
           ))}
         </div>

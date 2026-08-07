@@ -72,19 +72,17 @@ const OurCollections: React.FC = () => {
         
         <div className="rings-grid">
           {ringCollection.map((ring) => (
-            <ScrollReveal key={ring.id} direction="up" delay={ring.id * 0.1}>
-              <Link to={`/product/ring-${ring.id}`} className="ring-card-item" style={{ textDecoration: 'none', color: 'inherit' }}>
-                <div className="ring-image-wrapper">
-                  <img src={ring.image} alt={ring.name} className="ring-image" loading="lazy" />
-                  <div className="ring-card-overlay">
-                    <span className="ring-inquire-btn">View Details</span>
-                  </div>
+            <ScrollReveal key={ring.id} direction="up" delay={ring.id * 0.1} className="ring-card-item">
+              <div className="ring-image-wrapper">
+                <img src={ring.image} alt={ring.name} className="ring-image" loading="lazy" />
+                <div className="ring-card-overlay">
+                  <Link to={`/product/ring-${ring.id}`} className="ring-inquire-btn">View Details</Link>
                 </div>
-                <div className="ring-details">
-                  <h4 className="ring-name">{ring.name}</h4>
-                  <p className="ring-subtext">{ring.material}</p>
-                </div>
-              </Link>
+              </div>
+              <div className="ring-details">
+                <h4 className="ring-name">{ring.name}</h4>
+                <p className="ring-subtext">{ring.material}</p>
+              </div>
             </ScrollReveal>
           ))}
         </div>
