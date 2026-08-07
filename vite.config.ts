@@ -10,11 +10,19 @@ export default defineConfig({
     chunkSizeWarningLimit: 500,
     rollupOptions: {
       output: {
-        // Split vendor libraries into a separate chunk for better caching
-        manualChunks: {
-          react: ['react', 'react-dom'],
-          motion: ['motion'],
-          gsap: ['gsap'],
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('react') || id.includes('react-dom')) {
+              return 'react';
+            }
+            if (id.includes('motion')) {
+              return 'motion';
+            }
+            if (id.includes('gsap')) {
+              return 'gsap';
+            }
+            return 'vendor'; // All other vendor libraries go to 'vendor' chunk
+          }
         },
       },
     },
