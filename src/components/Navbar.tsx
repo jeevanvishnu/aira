@@ -61,6 +61,9 @@ export default function Navbar() {
             <Link to="/" className="navbar-link">Home</Link>
           </li>
           <li className="navbar-item">
+            <Link to="/shop" className="navbar-link">Shop</Link>
+          </li>
+          <li className="navbar-item">
             <Link to="/#about" className="navbar-link">Our Story</Link>
           </li>
         </ul>
@@ -109,6 +112,7 @@ export default function Navbar() {
           
           <ul className="navbar-menu-mobile-list">
             <li><Link to="/" onClick={closeMenus}>Home</Link></li>
+            <li><Link to="/shop" onClick={closeMenus}>Shop All Jewellery</Link></li>
             <li><Link to="/#about" onClick={closeMenus}>Our Story</Link></li>
             <li><Link to="/#collections" onClick={closeMenus}>Collections</Link></li>
             <li><Link to="/contact" onClick={closeMenus}>Contact Us</Link></li>

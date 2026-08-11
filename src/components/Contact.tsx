@@ -47,7 +47,7 @@ const Contact: React.FC = () => {
               <Phone className="contact-icon" size={20} strokeWidth={1.5} />
               <div>
                 <h4>Call Us</h4>
-                <p>+971 50 184 7916<br/>+971 65 64 6425</p>
+                <p>+971 50 184 7916<br/>(06) 564 6425</p>
               </div>
             </div>
             

@@ -68,7 +68,7 @@ const ContactPage: React.FC = () => {
                   <div className="info-icon-wrapper"><Phone size={22} strokeWidth={1.2} /></div>
                   <div>
                     <h4>Call Us</h4>
-                    <p>+971 50 184 7916</p>
+                    <p>+971 50 184 7916<br/>(06) 564 6425</p>
                   </div>
                 </div>
                 

@@ -6,6 +6,8 @@ import Home from './pages/Home';
 import ContactPage from './pages/ContactPage';
 import PolicyPage from './pages/PolicyPage';
 import ProductDetailsPage from './pages/ProductDetailsPage';
+import ProductListingPage from './pages/ProductListingPage';
+
 
 const App = () => {
   const location = useLocation();
@@ -31,6 +33,7 @@ const App = () => {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/policies" element={<PolicyPage />} />
         <Route path="/product/:id" element={<ProductDetailsPage />} />
+        <Route path="/shop" element={<ProductListingPage />} />
       </Routes>
       <Footer />
     </>

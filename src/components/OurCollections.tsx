@@ -46,7 +46,7 @@ const OurCollections: React.FC = () => {
 
           <div className="collections-card-grid">
             {collections.map((item) => (
-              <a href={`#${item.id}`} key={item.id} className="premium-card">
+              <Link to={`/shop?category=${item.title}`} key={item.id} className="premium-card">
                 <div className="premium-card-image-wrapper">
                   <img src={item.image} alt={item.title} className="premium-card-image" loading="lazy" />
                   <div className="premium-card-overlay"></div>
@@ -56,7 +56,7 @@ const OurCollections: React.FC = () => {
                   <div className="premium-card-divider"></div>
                   <span className="premium-card-explore">Explore Collection <span className="arrow">→</span></span>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
