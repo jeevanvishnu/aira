@@ -163,13 +163,13 @@ const ContactPage: React.FC = () => {
       <section className="contact-map-section">
         <ScrollReveal direction="up" className="premium-map-container">
           <iframe 
-            src="https://maps.google.com/maps?q=8.6024584,76.9988556&t=&z=12&ie=UTF8&iwloc=&output=embed" 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3605.44116953737!2d55.383992785835595!3d25.356526767509628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f5b0038dde073%3A0x26fbe84764f78186!2sAira%20jewels!5e0!3m2!1sen!2sin!4v1786364421124!5m2!1sen!2sin" 
             width="100%" 
             height="100%" 
             style={{border: 0}} 
             allowFullScreen={true} 
             loading="lazy" 
-            referrerPolicy="no-referrer-when-downgrade"
+            referrerPolicy="strict-origin-when-cross-origin"
             title="Aira Jewels Location"
           ></iframe>
         </ScrollReveal>

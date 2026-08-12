@@ -1,0 +1,36 @@
+<svg width="600" height="600" viewBox="0 0 600 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Organic Flow 1 (Main wing shape) -->
+  <g stroke="#0A3E3B" stroke-linecap="round">
+    <!-- Outer boundary loop -->
+    <path d="M100 250 C180 120, 320 280, 420 180 C480 120, 520 260, 550 380" stroke-width="2.5" stroke-opacity="0.75"/>
+    
+    <!-- Parallel texture lines mapping the contours -->
+    <path d="M105 253 C183 125, 318 282, 417 183 C476 124, 516 262, 545 382" stroke-width="1.8" stroke-opacity="0.7"/>
+    <path d="M110 256 C186 130, 316 284, 414 186 C472 128, 512 264, 540 384" stroke-width="1.5" stroke-opacity="0.65"/>
+    <path d="M115 259 C189 135, 314 286, 411 189 C468 132, 508 266, 535 386" stroke-width="1.3" stroke-opacity="0.6"/>
+    <path d="M120 262 C192 140, 312 288, 408 192 C464 136, 504 268, 530 388" stroke-width="1.1" stroke-opacity="0.55"/>
+    <path d="M125 265 C195 145, 310 290, 405 195 C460 140, 500 270, 525 390" stroke-width="0.9" stroke-opacity="0.5"/>
+    <path d="M130 268 C198 150, 308 292, 402 198 C456 144, 496 272, 520 392" stroke-width="0.7" stroke-opacity="0.45"/>
+    
+    <!-- Fine inner lines creating grain texture -->
+    <path d="M135 271 C201 155, 306 294, 399 201 C452 148, 492 274, 515 394" stroke-width="0.5" stroke-opacity="0.4"/>
+    <path d="M140 274 C204 160, 304 296, 396 204 C448 152, 488 276, 510 396" stroke-width="0.5" stroke-opacity="0.35"/>
+    <path d="M145 277 C207 165, 302 298, 393 207 C444 156, 484 278, 505 398" stroke-width="0.4" stroke-opacity="0.3"/>
+    <path d="M150 280 C210 170, 300 300, 390 210 C440 160, 480 280, 500 400" stroke-width="0.4" stroke-opacity="0.25"/>
+  </g>
+
+  <!-- Organic Flow 2 (Secondary wing/petal shape) -->
+  <g stroke="#0A3E3B" stroke-linecap="round">
+    <path d="M220 400 C270 280, 400 300, 350 480 C320 560, 230 550, 160 480" stroke-width="2.5" stroke-opacity="0.75"/>
+    <path d="M223 402 C272 284, 397 302, 347 482 C318 561, 229 550, 162 481" stroke-width="1.8" stroke-opacity="0.7"/>
+    <path d="M226 404 C274 288, 394 304, 344 484 C316 562, 228 550, 164 482" stroke-width="1.5" stroke-opacity="0.65"/>
+    <path d="M229 406 C276 292, 391 306, 341 486 C314 563, 227 550, 166 483" stroke-width="1.3" stroke-opacity="0.6"/>
+    <path d="M232 408 C278 296, 388 308, 338 488 C312 564, 226 550, 168 484" stroke-width="1.1" stroke-opacity="0.55"/>
+    <path d="M235 410 C280 300, 385 310, 335 490 C310 565, 225 550, 170 485" stroke-width="0.9" stroke-opacity="0.5"/>
+    <path d="M238 412 C282 304, 382 312, 332 492 C308 566, 224 550, 172 486" stroke-width="0.7" stroke-opacity="0.45"/>
+    <path d="M241 414 C284 308, 379 314, 329 494 C306 567, 223 550, 174 487" stroke-width="0.5" stroke-opacity="0.4"/>
+    <path d="M244 416 C286 312, 376 316, 326 496 C304 568, 222 550, 176 488" stroke-width="0.5" stroke-opacity="0.35"/>
+    <path d="M247 418 C288 316, 373 318, 323 498 C302 569, 221 550, 178 489" stroke-width="0.4" stroke-opacity="0.3"/>
+    <path d="M250 420 C290 320, 370 320, 320 500 C300 570, 220 550, 180 490" stroke-width="0.4" stroke-opacity="0.25"/>
+  </g>
+</svg>

@@ -1,8 +1,31 @@
 .bc-section {
   padding: 6rem 0;
-  background-color: var(--secondary-color, #fcf9f2);
-  /* Matches premium soft background */
+  background-color: #fdfcf9;
+  position: relative;
   overflow: hidden;
+  --primary-color: var(--color-kids-teal, #0A3E3B);
+}
+
+.bc-art-bg-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 800px;
+  aspect-ratio: 1;
+  pointer-events: none;
+  opacity: 0.05;
+  z-index: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bc-floating-art {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .bc-container {
@@ -12,11 +35,35 @@
   flex-direction: column;
   align-items: center;
   padding: 0 5%;
+  position: relative;
+  z-index: 1;
 }
 
 .bc-header {
   text-align: center;
   margin-bottom: 4rem;
+  max-width: 800px;
+}
+
+.bc-logo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.bc-logo {
+  height: 90px;
+  width: auto;
+}
+
+.bc-description {
+  font-family: var(--font-body);
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--color-text-light);
+  margin-top: 1.5rem;
+  text-align: center;
 }
 
 .bc-eyebrow {

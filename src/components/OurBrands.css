@@ -126,7 +126,7 @@
   flex-grow: 1;
 }
 
-.brand-explore {
+.brand-explore-btn {
   font-family: var(--font-body);
   font-size: 11px;
   font-weight: 500;
@@ -134,14 +134,195 @@
   text-transform: uppercase;
   text-decoration: none;
   color: var(--color-dark);
+  background: none;
+  border: none;
   border-bottom: 1px solid var(--color-dark);
   padding-bottom: 4px;
+  cursor: pointer;
   transition: var(--transition-fast);
 }
 
-.brand-explore:hover {
+.brand-explore-btn:hover {
   color: var(--color-gold);
   border-bottom-color: var(--color-gold);
+  padding-bottom: 6px;
+}
+
+/* Brand Logos */
+.brand-logo-container {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  transition: transform 0.4s ease;
+}
+
+.brand-card:hover .brand-logo-container {
+  transform: scale(1.1);
+}
+
+.brand-logo-img {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+}
+
+.brand-logo-svg {
+  width: 60px;
+  height: 60px;
+}
+
+/* Legacy Story Modal */
+.brand-story-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(17, 17, 17, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+.brand-story-modal-content {
+  background-color: rgba(250, 247, 242, 0.98);
+  border: 1px solid rgba(201, 169, 110, 0.3);
+  max-width: 600px;
+  width: 100%;
+  border-radius: 16px;
+  padding: 50px 40px;
+  position: relative;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+  animation: slideUp 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.brand-story-modal-close {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  line-height: 1;
+  color: var(--color-text-light);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.brand-story-modal-close:hover {
+  color: var(--color-gold);
+}
+
+.brand-story-modal-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.modal-logo-wrapper {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.modal-logo-img {
+  height: 80px;
+  width: auto;
+  object-fit: contain;
+}
+
+.modal-brand-name {
+  font-size: 38px;
+  font-weight: 300;
+  color: var(--color-dark);
+  margin-bottom: 5px;
+  letter-spacing: 0.05em;
+}
+
+.modal-brand-subtitle {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.modal-divider {
+  width: 50px;
+  height: 1px;
+  background-color: var(--color-gold);
+  margin: 20px auto 0;
+}
+
+.brand-story-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.story-section h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--color-gold-dark);
+  margin-bottom: 8px;
+}
+
+.story-section p {
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: var(--color-text);
+  text-align: justify;
+}
+
+.brand-story-modal-footer {
+  text-align: center;
+}
+
+.modal-contact-link {
+  display: inline-block;
+  padding: 12px 30px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-surface);
+  background-color: var(--color-dark);
+  border: 1px solid var(--color-dark);
+  text-decoration: none;
+  transition: var(--transition-smooth);
+}
+
+.modal-contact-link:hover {
+  background-color: var(--color-gold);
+  border-color: var(--color-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(201, 169, 110, 0.25);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Mobile Responsiveness */
@@ -159,6 +340,14 @@
   
   .brand-card-inner {
     padding: 50px 30px;
+  }
+
+  .brand-story-modal-content {
+    padding: 40px 25px;
+  }
+  
+  .modal-brand-name {
+    font-size: 32px;
   }
 }
 

@@ -54,7 +54,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className={`navbar ${(!isHomePage || isScrolled) ? 'navbar--scrolled' : 'navbar--transparent'}`} role="navigation">
+      <nav className={`navbar ${(!isHomePage || isScrolled) ? 'navbar--scrolled border-pattern-bottom' : 'navbar--transparent'}`} role="navigation">
         {/* Desktop Left Menu */}
         <ul className="navbar-menu navbar-menu--left navbar-menu--desktop">
           <li className="navbar-item">

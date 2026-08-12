@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './BabyCollection.css';
 import ScrollReveal from './ScrollReveal';
+import butterflyBrandLogo from '../assets/butterfly-brand-logo.png';
+import butterflyArt from '../assets/butterfly-art.svg';
 
 import img1 from '../assetss/baby/AND00489.webp';
 import img2 from '../assetss/baby/AND00490.webp';
@@ -40,13 +42,26 @@ const BabyCollection: React.FC = () => {
   }, []);
 
   return (
-    <section className="bc-section">
+    <section className="bc-section bg-pattern-silver">
+      {/* Floating Organic Line Art Backdrop */}
+      <div className="bc-art-bg-wrapper">
+        <img src={butterflyArt} alt="" className="bc-floating-art" />
+      </div>
+
       <div className="bc-container">
         <ScrollReveal direction="up" className="bc-header">
-          <span className="bc-eyebrow">FOR THE LITTLE ONES</span>
-          <h2 className="bc-title">Baby Collection</h2>
+          <div className="bc-logo-wrapper">
+            <img src={butterflyBrandLogo} alt="Butterfly Logo" className="bc-logo" />
+          </div>
+          <span className="bc-eyebrow">BUTTERFLY — FOR THE LITTLE ONES</span>
+          <h2 className="bc-title">Precious Butterfly</h2>
           <div className="bc-divider"></div>
-
+          <p className="bc-description">
+            Like a caterpillar transforming in a cocoon of safety, our kids' collection represents 
+            the tender beginnings and playful imagination of childhood. The fine organic threads of 
+            the logo celebrate natural growth, pure protection, and the whimsical flutter of a butterfly, 
+            reminding us of the delicate beauty in every milestone.
+          </p>
         </ScrollReveal>
       </div>
 

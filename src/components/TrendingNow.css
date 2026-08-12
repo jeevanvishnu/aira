@@ -5,6 +5,9 @@
 .trending-section {
   padding: 0;
   background-color: var(--color-dark);
+  background-image: url('../assets/brand-pattern-dark.png');
+  background-repeat: repeat;
+  background-size: 320px 320px;
   position: relative;
   overflow: hidden;
 }
@@ -40,6 +43,9 @@
   text-align: center;
   padding: 80px 40px 60px;
   background-color: var(--color-dark);
+  background-image: url('../assets/brand-pattern-dark.png');
+  background-repeat: repeat;
+  background-size: 320px 320px;
   position: relative;
   z-index: 2;
   border-bottom: 1px solid rgba(201, 169, 110, 0.12);

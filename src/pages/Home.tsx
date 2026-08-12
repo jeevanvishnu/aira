@@ -1,5 +1,6 @@
 import HeroScroll from '../components/HeroScroll';
 import OurStory from '../components/OurStory';
+import LogoStory from '../components/LogoStory';
 import OurCollections from '../components/OurCollections';
 import PromotionalBanner from '../components/PromotionalBanner';
 import NecklaceGallery from '../components/NecklaceGallery';
@@ -15,6 +16,7 @@ const Home = () => {
     <main>
       <HeroScroll />
       <OurStory />
+      <LogoStory />
       <OurCollections />
       <PromotionalBanner />
       <NecklaceGallery />
@@ -29,3 +31,4 @@ const Home = () => {
 };
 
 export default Home;
+

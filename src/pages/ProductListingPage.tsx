@@ -2,7 +2,7 @@ import React, { useState, useEffect, useMemo } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { Search, SlidersHorizontal, Grid2x2, Grid3x3, LayoutGrid, X, ChevronDown, Check, ArrowUpDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-import { products, type ProductDetails } from '../data/products';
+import { products } from '../data/products';
 import './ProductListingPage.css';
 
 const AVAILABLE_MATERIALS = [
@@ -31,7 +31,7 @@ const ProductListingPage: React.FC = () => {
   const [selectedMaterials, setSelectedMaterials] = useState<string[]>(initialMaterials);
   const [sortBy, setSortBy] = useState<string>(initialSort);
   const [gridCols, setGridCols] = useState<number>(initialGrid);
-  
+
   const [isFilterDrawerOpen, setIsFilterDrawerOpen] = useState(false);
   const [activeAccordion, setActiveAccordion] = useState<{ [key: string]: boolean }>({
     categories: true,
@@ -46,7 +46,7 @@ const ProductListingPage: React.FC = () => {
     if (selectedMaterials.length > 0) params.material = selectedMaterials.join(',');
     if (sortBy !== 'featured') params.sort = sortBy;
     if (gridCols !== 3) params.grid = String(gridCols);
-    
+
     setSearchParams(params, { replace: true });
   }, [selectedCategory, searchQuery, selectedMaterials, sortBy, gridCols, setSearchParams]);
 
@@ -66,7 +66,7 @@ const ProductListingPage: React.FC = () => {
   const matchMaterial = (productMaterial: string, filterMaterial: string) => {
     const normProduct = productMaterial.toLowerCase();
     const normFilter = filterMaterial.toLowerCase();
-    
+
     if (normFilter === 'yellow gold') {
       return normProduct.includes('yellow gold') || (normProduct.includes('gold') && !normProduct.includes('rose') && !normProduct.includes('white'));
     }
@@ -90,7 +90,7 @@ const ProductListingPage: React.FC = () => {
 
   // Toggle material filter selection
   const handleMaterialToggle = (materialId: string) => {
-    setSelectedMaterials(prev => 
+    setSelectedMaterials(prev =>
       prev.includes(materialId)
         ? prev.filter(m => m !== materialId)
         : [...prev, materialId]
@@ -125,8 +125,8 @@ const ProductListingPage: React.FC = () => {
     // 2. Filter by search query
     if (searchQuery.trim() !== '') {
       const q = searchQuery.toLowerCase();
-      result = result.filter(p => 
-        p.name.toLowerCase().includes(q) || 
+      result = result.filter(p =>
+        p.name.toLowerCase().includes(q) ||
         p.material.toLowerCase().includes(q) ||
         p.category.toLowerCase().includes(q) ||
         (p.description && p.description.toLowerCase().includes(q))
@@ -135,7 +135,7 @@ const ProductListingPage: React.FC = () => {
 
     // 3. Filter by materials
     if (selectedMaterials.length > 0) {
-      result = result.filter(p => 
+      result = result.filter(p =>
         selectedMaterials.some(mat => matchMaterial(p.material, mat))
       );
     }
@@ -160,7 +160,7 @@ const ProductListingPage: React.FC = () => {
           <h1 className="plp-hero-title">Exquisite Fine Jewellery</h1>
           <div className="plp-hero-divider"></div>
           <p className="plp-hero-subtitle">
-            Indulge in our masterfully crafted selection of rings, necklaces, bracelets, and earrings. 
+            Indulge in our masterfully crafted selection of rings, necklaces, bracelets, and earrings.
             Each piece is meticulously designed with 18k gold and hand-selected gemstones to elevate your everyday elegance.
           </p>
         </div>
@@ -171,8 +171,8 @@ const ProductListingPage: React.FC = () => {
         <div className="plp-control-container">
           {/* Left: Filter Toggle & Results Count */}
           <div className="plp-control-left">
-            <button 
-              className="plp-filter-btn" 
+            <button
+              className="plp-filter-btn"
               onClick={() => setIsFilterDrawerOpen(true)}
               aria-label="Open filters"
             >
@@ -204,21 +204,21 @@ const ProductListingPage: React.FC = () => {
           <div className="plp-control-right">
             {/* Grid density toggles */}
             <div className="plp-grid-toggles">
-              <button 
+              <button
                 className={`plp-grid-toggle ${gridCols === 2 ? 'active' : ''}`}
                 onClick={() => setGridCols(2)}
                 title="2 Columns View"
               >
                 <Grid2x2 size={18} />
               </button>
-              <button 
+              <button
                 className={`plp-grid-toggle ${gridCols === 3 ? 'active' : ''}`}
                 onClick={() => setGridCols(3)}
                 title="3 Columns View"
               >
                 <Grid3x3 size={18} />
               </button>
-              <button 
+              <button
                 className={`plp-grid-toggle plp-grid-toggle--desktop ${gridCols === 4 ? 'active' : ''}`}
                 onClick={() => setGridCols(4)}
                 title="4 Columns View"
@@ -230,8 +230,8 @@ const ProductListingPage: React.FC = () => {
             {/* Sorting dropdown wrapper */}
             <div className="plp-sort-wrapper">
               <ArrowUpDown size={14} className="plp-sort-icon" />
-              <select 
-                value={sortBy} 
+              <select
+                value={sortBy}
                 onChange={(e) => setSortBy(e.target.value)}
                 className="plp-sort-select"
                 aria-label="Sort products"
@@ -286,7 +286,7 @@ const ProductListingPage: React.FC = () => {
       {/* 3. Main Body: Filters Sidebar + Grid layout */}
       <div className="plp-main-content">
         <div className="plp-layout-container">
-          
+
           {/* Desktop Filter Sidebar */}
           <aside className="plp-sidebar">
             {/* Search Input widget */}
@@ -294,9 +294,9 @@ const ProductListingPage: React.FC = () => {
               <h4 className="plp-sidebar-title">Search</h4>
               <div className="plp-search-box">
                 <Search size={16} className="plp-search-icon" />
-                <input 
-                  type="text" 
-                  placeholder="Search collections..." 
+                <input
+                  type="text"
+                  placeholder="Search collections..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
                   className="plp-search-input"
@@ -311,7 +311,7 @@ const ProductListingPage: React.FC = () => {
 
             {/* Category Accordion */}
             <div className="plp-sidebar-accordion">
-              <button 
+              <button
                 className="plp-accordion-header"
                 onClick={() => toggleAccordion('categories')}
               >
@@ -322,7 +322,7 @@ const ProductListingPage: React.FC = () => {
                 <ul className="plp-filter-list">
                   {CATEGORIES.map(category => (
                     <li key={category}>
-                      <button 
+                      <button
                         className={`plp-filter-link ${selectedCategory === category ? 'active' : ''}`}
                         onClick={() => setSelectedCategory(category)}
                       >
@@ -337,7 +337,7 @@ const ProductListingPage: React.FC = () => {
 
             {/* Materials Accordion */}
             <div className="plp-sidebar-accordion">
-              <button 
+              <button
                 className="plp-accordion-header"
                 onClick={() => toggleAccordion('materials')}
               >
@@ -350,8 +350,8 @@ const ProductListingPage: React.FC = () => {
                     const isChecked = selectedMaterials.includes(mat.id);
                     return (
                       <label key={mat.id} className="plp-checkbox-label">
-                        <input 
-                          type="checkbox" 
+                        <input
+                          type="checkbox"
                           checked={isChecked}
                           onChange={() => handleMaterialToggle(mat.id)}
                           className="hidden-checkbox"
@@ -372,7 +372,7 @@ const ProductListingPage: React.FC = () => {
           <main className="plp-grid-container">
             <AnimatePresence mode="popLayout">
               {filteredProducts.length > 0 ? (
-                <motion.div 
+                <motion.div
                   className={`plp-grid plp-grid--cols-${gridCols}`}
                   layout
                 >
@@ -383,20 +383,20 @@ const ProductListingPage: React.FC = () => {
                       initial={{ opacity: 0, y: 30 }}
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, scale: 0.95 }}
-                      transition={{ 
-                        duration: 0.5, 
+                      transition={{
+                        duration: 0.5,
                         delay: index * 0.03,
-                        ease: [0.25, 0.46, 0.45, 0.94] 
+                        ease: [0.25, 0.46, 0.45, 0.94]
                       }}
                       layout
                     >
                       <Link to={`/product/${product.id}`} className="plp-card-link">
                         <div className="plp-card-image-wrapper">
-                          <img 
-                            src={product.image} 
-                            alt={product.name} 
+                          <img
+                            src={product.image}
+                            alt={product.name}
                             className="plp-card-image"
-                            loading="lazy" 
+                            loading="lazy"
                           />
                           <div className="plp-card-overlay">
                             <span className="plp-card-overlay-btn">View Details</span>
@@ -415,7 +415,7 @@ const ProductListingPage: React.FC = () => {
                   ))}
                 </motion.div>
               ) : (
-                <motion.div 
+                <motion.div
                   className="plp-no-results"
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -442,7 +442,7 @@ const ProductListingPage: React.FC = () => {
         {isFilterDrawerOpen && (
           <>
             {/* Dark glassmorphism overlay */}
-            <motion.div 
+            <motion.div
               className="plp-drawer-overlay"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -451,7 +451,7 @@ const ProductListingPage: React.FC = () => {
             />
 
             {/* Sidebar drawer content */}
-            <motion.div 
+            <motion.div
               className="plp-drawer"
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
@@ -460,7 +460,7 @@ const ProductListingPage: React.FC = () => {
             >
               <div className="plp-drawer-header">
                 <h3>Filters</h3>
-                <button 
+                <button
                   className="plp-drawer-close"
                   onClick={() => setIsFilterDrawerOpen(false)}
                   aria-label="Close filters drawer"
@@ -475,9 +475,9 @@ const ProductListingPage: React.FC = () => {
                   <h4 className="plp-drawer-title">Search</h4>
                   <div className="plp-search-box">
                     <Search size={16} className="plp-search-icon" />
-                    <input 
-                      type="text" 
-                      placeholder="Search collections..." 
+                    <input
+                      type="text"
+                      placeholder="Search collections..."
                       value={searchQuery}
                       onChange={(e) => setSearchQuery(e.target.value)}
                       className="plp-search-input"
@@ -514,8 +514,8 @@ const ProductListingPage: React.FC = () => {
                       const isChecked = selectedMaterials.includes(mat.id);
                       return (
                         <label key={mat.id} className="plp-checkbox-label">
-                          <input 
-                            type="checkbox" 
+                          <input
+                            type="checkbox"
                             checked={isChecked}
                             onChange={() => handleMaterialToggle(mat.id)}
                             className="hidden-checkbox"
