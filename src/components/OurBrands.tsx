@@ -32,7 +32,7 @@ const brands: Brand[] = [
   {
     id: 2,
     name: 'Zam',
-    subtitle: 'Diamonds',
+    subtitle: 'Natural Diamonds',
     description: 'Exquisite diamond jewellery that radiates brilliance and timeless elegance.',
     story: {
       meaning: 'A geometric diamond configuration symbolizing symmetry, absolute clarity, and the eternal beauty of natural diamonds.',
@@ -43,7 +43,7 @@ const brands: Brand[] = [
   {
     id: 3,
     name: 'Feather',
-    subtitle: 'Light Weight Gold',
+    subtitle: 'Lifestyle Jewelry',
     description: 'Effortless everyday wear featuring ultra-lightweight, contemporary gold designs.',
     story: {
       meaning: 'A minimalist floating feather representing weightlessness, fluid movement, and contemporary ease.',
