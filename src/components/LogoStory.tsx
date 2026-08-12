@@ -14,8 +14,6 @@ const LogoStory: React.FC = () => {
               <img src={logoMark} alt="Aira Jewels Logo Symbol" className="logo-story-mark" />
             </div>
             
-            <h2 className="logo-story-title">Why this logo</h2>
-            
             <div className="logo-story-divider"></div>
             
             <div className="logo-story-text">
