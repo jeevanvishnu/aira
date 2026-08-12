@@ -150,7 +150,7 @@
 
 /* Brand Logos */
 .brand-logo-container {
-  height: 100px;
+  height: 140px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,14 +163,14 @@
 }
 
 .brand-logo-img {
-  height: 90px;
+  height: 120px;
   width: auto;
   object-fit: contain;
 }
 
 .brand-logo-svg {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
 }
 
 /* Legacy Story Modal */
