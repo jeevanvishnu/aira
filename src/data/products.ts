@@ -230,42 +230,6 @@ export const products: ProductDetails[] = [
     description: "Bold interlocking chain links combining different metal tones for a versatile, contemporary look.",
     features: ["Rose Gold & Mixed Metals", "Chunky interlocking links", "Contemporary design", "Versatile styling"]
   },
-  {
-    id: 'bracelet-5',
-    name: 'Eternity Diamond Bangle',
-    category: 'Bracelets',
-    material: '18k White Gold & Diamonds',
-    image: bracelet1,
-    description: "A seamless circle of brilliant diamonds set in cool white gold, symbolizing eternal elegance.",
-    features: ["18k White Gold", "Continuous diamond setting", "Secure hidden clasp", "Timeless elegance"]
-  },
-  {
-    id: 'bracelet-6',
-    name: 'Classic Tennis Bracelet',
-    category: 'Bracelets',
-    material: '18k Yellow Gold & Diamonds',
-    image: bracelet2,
-    description: "The quintessential tennis bracelet, featuring perfectly matched diamonds in a flexible yellow gold setting.",
-    features: ["18k Yellow Gold", "Perfectly matched diamonds", "Flexible comfortable link", "Classic design"]
-  },
-  {
-    id: 'bracelet-7',
-    name: 'Sapphire Halo Bracelet',
-    category: 'Bracelets',
-    material: 'Platinum & Blue Sapphire',
-    image: bracelet3,
-    description: "Deep blue sapphires surrounded by diamond halos create a regal and breathtaking contrast.",
-    features: ["Platinum Setting", "Rich Blue Sapphires", "Diamond halo surrounds", "Regal aesthetic"]
-  },
-  {
-    id: 'bracelet-8',
-    name: 'Interlocking Chain Link',
-    category: 'Bracelets',
-    material: 'Rose Gold & Mixed Metals',
-    image: bracelet4,
-    description: "Bold interlocking chain links combining different metal tones for a versatile, contemporary look.",
-    features: ["Rose Gold & Mixed Metals", "Chunky interlocking links", "Contemporary design", "Versatile styling"]
-  },
 
   // --- Earrings ---
   {
@@ -279,60 +243,6 @@ export const products: ProductDetails[] = [
   },
   {
     id: 'earring-2',
-    name: 'Diamond Solitaire Studs',
-    category: 'Earrings',
-    material: 'Platinum & Brilliant Cut Diamonds',
-    image: earring2,
-    description: "The ultimate classic: brilliant-cut diamonds securely set in platinum for maximum sparkle.",
-    features: ["Platinum Setting", "Brilliant-cut diamonds", "Secure screw backs", "Everyday essential"]
-  },
-  {
-    id: 'earring-3',
-    name: 'Luminous Pearl Drops',
-    category: 'Earrings',
-    material: '18k Gold & Freshwater Pearl',
-    image: earring1,
-    description: "Elegant freshwater pearls suspended from simple gold hooks, offering a soft, luminous glow.",
-    features: ["18k Solid Gold", "Lustrous Freshwater Pearls", "Elegant drop design", "Lightweight for comfort"]
-  },
-  {
-    id: 'earring-4',
-    name: 'Diamond Solitaire Studs',
-    category: 'Earrings',
-    material: 'Platinum & Brilliant Cut Diamonds',
-    image: earring2,
-    description: "The ultimate classic: brilliant-cut diamonds securely set in platinum for maximum sparkle.",
-    features: ["Platinum Setting", "Brilliant-cut diamonds", "Secure screw backs", "Everyday essential"]
-  },
-  {
-    id: 'earring-5',
-    name: 'Luminous Pearl Drops',
-    category: 'Earrings',
-    material: '18k Gold & Freshwater Pearl',
-    image: earring1,
-    description: "Elegant freshwater pearls suspended from simple gold hooks, offering a soft, luminous glow.",
-    features: ["18k Solid Gold", "Lustrous Freshwater Pearls", "Elegant drop design", "Lightweight for comfort"]
-  },
-  {
-    id: 'earring-6',
-    name: 'Diamond Solitaire Studs',
-    category: 'Earrings',
-    material: 'Platinum & Brilliant Cut Diamonds',
-    image: earring2,
-    description: "The ultimate classic: brilliant-cut diamonds securely set in platinum for maximum sparkle.",
-    features: ["Platinum Setting", "Brilliant-cut diamonds", "Secure screw backs", "Everyday essential"]
-  },
-  {
-    id: 'earring-7',
-    name: 'Luminous Pearl Drops',
-    category: 'Earrings',
-    material: '18k Gold & Freshwater Pearl',
-    image: earring1,
-    description: "Elegant freshwater pearls suspended from simple gold hooks, offering a soft, luminous glow.",
-    features: ["18k Solid Gold", "Lustrous Freshwater Pearls", "Elegant drop design", "Lightweight for comfort"]
-  },
-  {
-    id: 'earring-8',
     name: 'Diamond Solitaire Studs',
     category: 'Earrings',
     material: 'Platinum & Brilliant Cut Diamonds',

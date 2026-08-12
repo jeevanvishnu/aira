@@ -9,12 +9,6 @@ import earring2 from '../assetss/earrings/earrings_2.webp';
 const earringCollection = [
   { id: 1, name: 'Luminous Pearl Drops', material: '18k Gold & Freshwater Pearl', image: earring1 },
   { id: 2, name: 'Diamond Solitaire Studs', material: 'Platinum & Brilliant Cut Diamonds', image: earring2 },
-  { id: 3, name: 'Luminous Pearl Drops', material: '18k Gold & Freshwater Pearl', image: earring1 },
-  { id: 4, name: 'Diamond Solitaire Studs', material: 'Platinum & Brilliant Cut Diamonds', image: earring2 },
-  { id: 5, name: 'Luminous Pearl Drops', material: '18k Gold & Freshwater Pearl', image: earring1 },
-  { id: 6, name: 'Diamond Solitaire Studs', material: 'Platinum & Brilliant Cut Diamonds', image: earring2 },
-  { id: 7, name: 'Luminous Pearl Drops', material: '18k Gold & Freshwater Pearl', image: earring1 },
-  { id: 8, name: 'Diamond Solitaire Studs', material: 'Platinum & Brilliant Cut Diamonds', image: earring2 },
 ];
 
 const EarringGallery: React.FC = () => {
