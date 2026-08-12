@@ -148,7 +148,7 @@ const ProductDetailsPage: React.FC = () => {
               </svg>
               Inquire via WhatsApp
             </a>
-            <Link to="/contact" className="pd-btn-inquire">Contact Our Designer</Link>
+            <Link to="/contact" className="pd-btn-inquire">Contact Us</Link>
           </div>
 
           <div className="pd-accordion">
