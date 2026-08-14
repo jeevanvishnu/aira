@@ -6,17 +6,13 @@ import butterflyBrandLogo from '../assets/butterfly-brand-logo.png';
 import butterflyArt from '../assets/butterfly-art.svg';
 
 import img1 from '../assetss/baby/AND00489.webp';
-import img2 from '../assetss/baby/AND00490.webp';
 import img3 from '../assetss/baby/AND00491.webp';
-import img4 from '../assetss/baby/AND00516.webp';
 import img5 from '../assetss/baby/AND00521.webp';
 import img6 from '../assetss/baby/AND00525.webp';
 
 const babyImages = [
   { id: 1, image: img1, name: 'Little Precious 1' },
-  { id: 2, image: img2, name: 'Little Precious 2' },
   { id: 3, image: img3, name: 'Little Precious 3' },
-  { id: 4, image: img4, name: 'Little Precious 4' },
   { id: 5, image: img5, name: 'Little Precious 5' },
   { id: 6, image: img6, name: 'Little Precious 6' }
 ];
@@ -55,8 +51,8 @@ const BabyCollection: React.FC = () => {
 
       <div className="bc-carousel-wrapper">
         <div className="bc-carousel-track" ref={carouselRef}>
-          {/* Double the images for seamless infinite looping */}
-          {[...babyImages, ...babyImages].map((item, index) => (
+          {/* Multiply the images for seamless infinite looping on large screens */}
+          {Array(6).fill(babyImages).flat().map((item: any, index: number) => (
             <div key={`${item.id}-${index}`} className="bc-carousel-card">
               <div className="bc-image-wrapper">
                 <img

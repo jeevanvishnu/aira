@@ -31,14 +31,11 @@ import earring2 from '../assetss/earrings/earrings_2.webp';
 
 // Baby Collection
 import baby1 from '../assetss/baby/AND00489.webp';
-import baby2 from '../assetss/baby/AND00490.webp';
 import baby3 from '../assetss/baby/AND00491.webp';
-import baby4 from '../assetss/baby/AND00516.webp';
 import baby5 from '../assetss/baby/AND00521.webp';
 import baby6 from '../assetss/baby/AND00525.webp';
 import baby7 from '../assetss/baby/AND00531.webp';
 import baby8 from '../assetss/baby/AND00550.webp';
-import baby9 from '../assetss/baby/AND00551.webp';
 import baby10 from '../assetss/baby/AND00564.webp';
 import baby11 from '../assetss/baby/AND00580.webp';
 import baby12 from '../assetss/baby/AND00649.webp';
@@ -262,29 +259,11 @@ export const products: ProductDetails[] = [
     features: ["Hypoallergenic 18k Gold", "Smooth rounded edges", "Secure locking mechanism", "Perfect for sensitive skin"]
   },
   {
-    id: 'baby-2',
-    name: 'Little Precious 2',
-    category: 'Baby Collection',
-    material: '18k Gold',
-    image: baby2,
-    description: "Carefully designed for little ones, this piece features smooth edges and a secure fit.",
-    features: ["Hypoallergenic 18k Gold", "Smooth rounded edges", "Secure locking mechanism", "Perfect for sensitive skin"]
-  },
-  {
     id: 'baby-3',
     name: 'Little Precious 3',
     category: 'Baby Collection',
     material: '18k Gold',
     image: baby3,
-    description: "Carefully designed for little ones, this piece features smooth edges and a secure fit.",
-    features: ["Hypoallergenic 18k Gold", "Smooth rounded edges", "Secure locking mechanism", "Perfect for sensitive skin"]
-  },
-  {
-    id: 'baby-4',
-    name: 'Little Precious 4',
-    category: 'Baby Collection',
-    material: '18k Gold',
-    image: baby4,
     description: "Carefully designed for little ones, this piece features smooth edges and a secure fit.",
     features: ["Hypoallergenic 18k Gold", "Smooth rounded edges", "Secure locking mechanism", "Perfect for sensitive skin"]
   },
@@ -321,15 +300,6 @@ export const products: ProductDetails[] = [
     category: 'Baby Collection',
     material: '18k Gold',
     image: baby8,
-    description: "Carefully designed for little ones, this piece features smooth edges and a secure fit.",
-    features: ["Hypoallergenic 18k Gold", "Smooth rounded edges", "Secure locking mechanism", "Perfect for sensitive skin"]
-  },
-  {
-    id: 'baby-9',
-    name: 'Little Precious 9',
-    category: 'Baby Collection',
-    material: '18k Gold',
-    image: baby9,
     description: "Carefully designed for little ones, this piece features smooth edges and a secure fit.",
     features: ["Hypoallergenic 18k Gold", "Smooth rounded edges", "Secure locking mechanism", "Perfect for sensitive skin"]
   },
