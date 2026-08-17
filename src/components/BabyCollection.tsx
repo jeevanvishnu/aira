@@ -7,7 +7,7 @@ import butterflyArt from '../assets/butterfly-art.svg';
 
 import img1 from '../assetss/baby/AND00489.webp';
 import img3 from '../assetss/baby/AND00491.webp';
-import img5 from '../assetss/baby/AND00521.webp';
+import img5 from '../assetss/baby/baby.png';
 import img6 from '../assetss/baby/AND00525.webp';
 
 const babyImages = [

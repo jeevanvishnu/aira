@@ -32,7 +32,7 @@ import earring2 from '../assetss/earrings/earrings_2.webp';
 // Baby Collection
 import baby1 from '../assetss/baby/AND00489.webp';
 import baby3 from '../assetss/baby/AND00491.webp';
-import baby5 from '../assetss/baby/AND00521.webp';
+import baby5 from '../assetss/baby/baby.png';
 import baby6 from '../assetss/baby/AND00525.webp';
 import baby7 from '../assetss/baby/AND00531.webp';
 import baby8 from '../assetss/baby/AND00550.webp';
