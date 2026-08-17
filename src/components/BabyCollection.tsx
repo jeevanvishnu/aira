@@ -7,13 +7,11 @@ import butterflyArt from '../assets/butterfly-art.svg';
 
 import img1 from '../assetss/baby/AND00489.webp';
 import img3 from '../assetss/baby/AND00491.webp';
-import img5 from '../assetss/baby/baby.png';
 import img6 from '../assetss/baby/AND00525.webp';
 
 const babyImages = [
   { id: 1, image: img1, name: 'Little Precious 1' },
   { id: 3, image: img3, name: 'Little Precious 3' },
-  { id: 5, image: img5, name: 'Little Precious 5' },
   { id: 6, image: img6, name: 'Little Precious 6' }
 ];
 
