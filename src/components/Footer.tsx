@@ -76,7 +76,7 @@ const Footer: React.FC = () => {
       {/* Bottom Bar */}
       <div className="footer-classic-bottom">
         <p>
-          &copy; All Rights Reserved | Developed by{' '}
+          All Rights Reserved | Developed by{' '}
           <a href="https://www.mostech.ae/" target="_blank" rel="noopener noreferrer" className="footer-developer-link">
             Mostech Business Solutions
           </a>
